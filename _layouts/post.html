@@ -1,0 +1,24 @@
+<h2><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></h2>
+
+
+
+
+{{ content }}
+
+
+<div id="share-buttons">
+
+Post by <img alt="Avatar" height="50" width="50"
+src="http://www.gravatar.com/avatar/08557ea48b0f92938bb0c01356ad606e?s=50" /> <a href="/about.html">Dairon Medina</a>
+on <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate="pubdate">{{ page.date | date_to_string }}</time> — <a id="dsq-comment-count" data-disqus-identifier="{{ page.url }}" href="{{ page.url }}#disqus_thread">0 comments</a>
+
+<div id="disqus_thread"></div>
+<noscript>Sorry but JavaScript must be enabled to see Comments.</noscript>
+<a class="dsq-brlink" href="http://disqus.com" rel="nofollow">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="text/javascript">
+/* Define title and URL for use with share buttons, Disqus, etc. */
+var page_title = '{{ page.title }}';
+var page_slug  = '{{ page.url }}';
+var page_url   = '{{ site.url }}{{ page.url }}';
+</script>
+

@@ -1,0 +1,5 @@
+markdown: rdiscount
+permalink: /:year/:month/:title
+title: codeadict.org
+url: http://codeadict.org
+exclude: [ README ]
