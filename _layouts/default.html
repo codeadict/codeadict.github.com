@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="shortcut icon" href="/imgs/favicon.ico" />
     <link rel="stylesheet" href="/css/codeadict.css?v=1">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/innerfade.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -18,38 +21,47 @@
         <header>
         <ul id="topnav">
             <li><a href="/">Home</a></li>
-            <li><a href="/services.html">Services</a></li>
+            <li><a href="/services/">Services</a></li>
             <li><a href="/work.html">Work</a></li>
-            <li><a href="/about.html">About/Contact</a></li>
+            <li><a href="/about.html">Contact</a></li>
             <li><a href="/blog/">Blog</a></li>
         </ul>
         </header>
 
         <div class="content">
             <article>
+
             {{ content }}
+
+            <div class="clear"></div>
             </article>
+
+            <aside class="sidebar">
+                <div class="media-links">
+                    <h2>Elsewhere</h2>
+                    <a href="http://www.twitter.com/codeadict">
+                        <img width="116" alt="Follow @codeadict on Twitter" src="/imgs/tweet.png">
+                    </a>
+                    <a href="http://www.linkedin.com/in/codeadict">
+                        <img width="116" alt="Professional Profile on LinkedIn" src="/imgs/linked.png">
+                    </a>
+                    <a href="http://www.bitbucket.org/codeadict" title="Projects on Bitbucket">
+                        <img width="116" alt="Bitbucket" src="/imgs/bitbucket.png">
+                    </a>
+                </div>
+
+                <a href="http://www.fsf.org/associate/support_freedom/join_fsf?referrer=2442" title="Join Free Software Foundation">
+                    <img src="/imgs/fsf.png" alt="Support freedom" title="Help protect your freedom, join the Free Software  Foundation" />
+                </a>
+                </aside>
+
+            <div class="clear"></div>
         </div>
 
         <footer>
-        <div id="legal">&copy 2011 Dairon Medina Caro. Powered by <a href="">Jekyll</a> </div>
-        <div>
-            <a class="tooltip" href="http://bitbucket.org/codeadict" title="Projects on Bitbucket">
-                <img alt="Projects on Bitbucket" src="/imgs/bitbucket.png"/>
-            </a>
-            <a class="tooltip" href="http://bitbucket.org/codeadict" title="LinkedIn Resume">
-                <img class="tooltip" alt="LinkedIn Resume" src="/imgs/lnkinlogo.png"/>
-            </a>
-            <a class="tooltip" href="http://twitter.com/codeadict" title="Dairon on Twitter">
-                <img class="tooltip" alt="Projects on Bitbucket" src="/imgs/twitter-a.png"/>
-            </a>
-
-        </div>
+        <div id="legal">&copy 2011 Dairon Medina Caro. Powered by <a href="" title="The hackers blog engine">Jekyll</a> </div>
+        <audio src=""></audio>
         </footer>
 
     </div>
 </body>
-
-
-
-
