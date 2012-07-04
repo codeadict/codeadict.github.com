@@ -1,0 +1,13 @@
+---
+title: Blog
+layout: default
+---
+
+<ul>
+{% for post in site.posts %}
+  <li>
+   <li><a href="{{ post.url }}">{{ post.title }}</a><abbr>{{ post.date | date_to_string }}</abbr></li>
+    <div class="clear"></div>
+  </li>
+{% endfor %}
+</ul>

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
-    <title>Dairon Medina Freelancer Software Developer :: {{ page.title }}</title>
+    <title>Dairon Medina Freelancer Software Developer :: Jquery Ctrl + Key function</title>
     <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="Dairon Medina Caro" />
@@ -24,14 +24,55 @@
             <li><a href="/services/">Services</a></li>
             <li><a href="/work.html">Work</a></li>
             <li><a href="/about.html">Contact</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog/">Blog</a></li>
         </ul>
         </header>
 
         <div class="content">
             <article>
 
-            {{ content }}
+            <h2><a href="http://codeadict.org/2009/10/jquery-ctrl-key-function">Jquery Ctrl + Key function</a></h2>
+
+Hello friends, in a recent PHP app im working i needed to make a Control+G key combination in a form to submit the data to a database. I create a Jquery function to make it easy and use with all Control +  combinations, now i share it with the comunity, i hope it can be usefull to someone:
+
+<code>
+$.ctrl = function(key, callback, args) {
+$(document).keydown(function(e) {
+if(!args) args=[]; // IE barks when args is null
+if(e.keyCode == key.charCodeAt(0) &amp;&amp; e.ctrlKey) {
+callback.apply(this, args);
+return false;
+}
+});
+};
+</code>
+
+The function can be called with 3 parameters, the first is the key you should press, second is the callback function to execute when you press the combination, and third is an additional array of arguments to pass to the callback funtion. Here is a function call example.
+
+<code>
+$.ctrl('G', function(s) {
+alert(s);
+}, ["No presiones D"]);
+</code>
+
+
+<div id="share-buttons"></div>
+
+Post by <img alt="Avatar" height="50" width="50"
+src="http://www.gravatar.com/avatar/f6bdc24da1643ff0943b3dc7a231f38e?s=50" /> <a href="/about.html">Dairon Medina</a>
+on <time datetime="2009-10-09" pubdate="pubdate">09 Oct 2009</time> — <a id="dsq-comment-count" data-disqus-identifier="/2009/10/jquery-ctrl-key-function" href="/2009/10/jquery-ctrl-key-function#disqus_thread">0 comments</a>
+
+<div id="disqus_thread"></div>
+<noscript>Sorry but JavaScript must be enabled to see Comments.</noscript>
+<a class="dsq-brlink" href="http://disqus.com" rel="nofollow">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="text/javascript">
+/* Define title and URL for use with share buttons, Disqus, etc. */
+var page_title = 'Jquery Ctrl + Key function';
+var page_slug  = '/2009/10/jquery-ctrl-key-function';
+var page_url   = 'http://codeadict.org/2009/10/jquery-ctrl-key-function';
+</script>
+
+
 
             <div class="clear"></div>
             </article>

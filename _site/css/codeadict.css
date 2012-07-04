@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, ol, ul, li, form, label, legend, caption, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section, summary {
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a img {
+   border: none
+}
+
+aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block}
+
+
+body, html {
+    width: 100%;
+    height:100%;
+}
+
+body {
+    color:#212121;
+    font-family:"myriad-pro-1","myriad-pro-2",Myriad,"Trebuchet MS",sans-serif;
+    font-size:12px;
+    font-weight:400;
+    line-height:16px;
+    margin:0;
+    padding:0;
+    text-rendering: optimizelegibility;
+}
+
+header, footer, nav, section, article {
+    display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1em;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+}
+h2 {
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+h3 {
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+h4, h5, h6 {
+    font-size: 16px;
+}
+p {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+a {
+    color: #7a1a20;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img {
+    border: 0;
+}
+
+#wrapper {
+    overflow:visible;
+    min-height:100%;
+    position:relative;
+    background-image:url("/imgs/bg.png");
+    background-position: 20% 50%;
+    background-repeat: no-repeat;
+}
+
+header {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    background-color:#212121;
+    background: rgba(33, 33, 33, 1) url("/imgs/logo.png") no-repeat left;
+    height:50px;
+    left:0;
+    position:relative;
+    top:0;
+    width:100%;
+    z-index:500;
+    margin: 0 auto auto;
+    width: 790px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0 2px 3px #000;
+}
+
+ul#topnav {
+    color:#EEEEEE;
+    font-size:16px;
+    letter-spacing:-4px;
+    padding:0;
+    position:absolute;
+    right:0;
+    top:0;
+    white-space:nowrap;
+}
+
+ul#topnav li {
+    color:#EEEEEE !important;
+    display:inline-block;
+    letter-spacing:0;
+    list-style:none outside none;
+    padding:0;
+}
+
+ul#topnav li a {
+    outline: 0 none;
+    color:#EEEEEE !important;
+    -moz-border-radius:3px 3px 3px 3px;
+    background-color:#333333;
+    font-family:"myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",Myriad,"Trebuchet MS",sans-serif;
+    font-weight:700;
+    height:auto;
+    line-height:18px;
+    margin:0 10px;
+    padding:3px 8px;
+    text-shadow:0 1px 1px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+
+}
+
+ul#topnav li a:hover {
+    outline: 0 none;
+    background-color: #BC2F2F;
+    text-decoration: none;
+    opacity: 1;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+/** KONTENT **/
+div.content{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: thin solid #DEDEDE;
+    margin: 0.6em auto auto;
+    min-height: 2em;
+    padding: 5px;
+    position: relative;
+    width: 790px;
+}
+div.content article{
+    float: left;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 555px;
+}
+div.content article p{
+    text-align: justify;
+}
+article p img.right{
+    float: left;
+    margin-right: 5px;
+    padding: 2px;
+    border: 1px solid #DEDEDE;
+}
+article p .dmpic{
+    display: block;
+    float: left;
+    margin-right: 5px;
+    padding: 0px;
+    border: 1px solid #DEDEDE;
+    width: 140px;
+    height: 185px;
+    background: transparent url('/imgs/dairon.png') no-repeat left;
+    -moz-transition: fade .8s ease-in-out;
+    -webkit-transition: opacity .8s ease-in-out;
+    transition: opacity .8s ease-in-out;
+
+}
+article p .dmpic:hover{
+    background-position: -140px 0;
+    -moz-transition: fade .8s ease-in-out;
+    -webkit-transition: opacity .8s ease-in-out;
+    transition: opacity .8s ease-in-out;
+}
+
+
+aside.sidebar{
+    text-align: center;
+    float: right;
+    margin-top: 7px;
+    width: 170px;
+    background: none repeat scroll 0 0 #FCFFF0;
+    border: thin solid #DDDDDD;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 5px 1em;
+}
+aside.sidebar h2{
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding: 0px;
+}
+blockquote{
+    color: #2F2F2F;
+    font: italic 12px/18px Arial,Helvetica,sans-serif;
+}
+
+footer {
+    position: relative;
+    clear: both;
+    margin-top: 5px;
+    padding: 10px 0;
+    color: #212121;
+}
+
+footer > div {
+}
+footer > div#legal {
+    text-align:center;
+}
+
+/* Disqus comments */
+
+#disqus_thread {
+    border-top: 4px solid #ddd;
+}
+#dsq-content {
+    font-size: 13px !important;
+}
+#dsq-content #dsq-global-toolbar, #dsq-content ul.dsq-login-buttons, #dsq-content div.dsq-options,
+#dsq-content #dsq-comments, #dsq-content #dsq-pagination {
+    margin-bottom: 20px !important;
+}
+div.dsq-tooltip-small {
+    width: auto;
+}
+#dsq-content ul.dsq-login-buttons {
+    padding-top: 10px !important;
+}
+#dsq-comment-count {
+    background: url('/imgs/comment.png') no-repeat left top;
+    padding-left: 20px;
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+#dsq-footer a > em {
+    text-decoration: none !important;
+}
+a.dsq-brlink {
+    font-size: 13px !important;
+}
+
+/** Helpers **/
+.clear{
+    clear: both;
+}
+
+::-moz-selection { background-color: #FCFFF0; color: #D12B36; text-shadow: none; }
+::selection { background-color: #FCFFF0; color: #D12B36; text-shadow: none; }
+

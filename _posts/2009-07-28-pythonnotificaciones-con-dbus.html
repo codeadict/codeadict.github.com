@@ -1,0 +1,31 @@
+--- 
+tags: 
+- Programming
+- Python
+type: post
+status: publish
+title: Python:Notificaciones con DBus
+meta: 
+  _edit_last: "7940715"
+published: true
+layout: post
+---
+Hola es este post voy a mostrar como enviar notificaciones al escritorio Gnome mediante Python y DBus como se muestra en la imagen siguiente:
+
+[caption id="attachment_22" align="aligncenter" width="357" caption="Notificación con dBus"]<img class="size-full wp-image-22" title="Notificacion" src="http://codeadict.files.wordpress.com/2009/07/pantallazo1.png" alt="Notificación con dBus" width="357" height="125" />[/caption]
+
+[sourcecode language="python"]
+#!/usr/bin/env python
+
+import dbus
+# Inicializando el bus de tipo session para comunicarse entre aplicaciones
+bus = dbus.SessionBus()
+# El objeto Notifications se encarga de enviar las notificaciones
+noti = bus.get_object(‘org.freedesktop.Notifications’,'/org/freedesktop/Notifications’)
+interface = dbus.Interface(noti,’org.freedesktop.Notifications’)
+#Muestro la notificacion
+#El tercer parametro es el icono a mostrar del stock de gtk y el ultimo es el tiempo de la notificacion
+notificar = interface.Notify(“DBus Test”, 0, “gtk-about”, “Hola mundo”,’Hola que viva linux’, “”,{},50000)
+[/sourcecode]
+<span style="color:#000080;"><span style="color:#000000;">Espero a alguien le pueda servir, saludos</span>
+</span>

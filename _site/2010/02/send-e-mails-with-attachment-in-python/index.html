@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+
+    <title>Dairon Medina Freelancer Software Developer :: Send e-mails with attachment in Python</title>
+    <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="Dairon Medina Caro" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="shortcut icon" href="/imgs/favicon.ico" />
+    <link rel="stylesheet" href="/css/codeadict.css?v=1">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/innerfade.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <header>
+        <ul id="topnav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/about.html">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+        </header>
+
+        <div class="content">
+            <article>
+
+            <h2><a href="http://codeadict.org/2010/02/send-e-mails-with-attachment-in-python">Send e-mails with attachment in Python</a></h2>
+
+Now im working on a little applicatithat have to send emails with attachments in python, I make that code that can be reusable to someone:
+
+[sourcecode language="python"]
+# -*- coding: iso-8859-1 -*-
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
+from smtplib import SMTP
+
+msg = MIMEMultipart()
+msg['Subject'] = 'Email From Python jajaja'
+msg['From'] = 'dairon@ceac.cu'
+msg['Reply-to'] = 'otroemail@dominio'
+msg['To'] = 'rms@gnu.org'
+
+# That is what u see if dont have an email reader:
+msg.preamble = 'Multipart massage.\n'
+
+# This is the textual part:
+part = MIMEText(&quot;Hello im sending an email from a python program&quot;)
+msg.attach(part)
+
+# This is the binary part(The Attachment):
+part = MIMEApplication(open(&quot;file.pdf&quot;,&quot;rb&quot;).read())
+part.add_header('Content-Disposition', 'attachment', filename=&quot;file.pdf&quot;)
+msg.attach(part)
+
+# Create an instance in SMTP server
+smtp = SMTP(&quot;smtp.domain.cu&quot;)
+# Start the server:
+smtp.ehlo()
+smtp.login(&quot;yo@example.com&quot;, &quot;mipassword&quot;)
+
+# Send the email
+smtp.sendmail(msg['From'], msg['To'], msg.as_string())
+[/sourcecode]
+
+
+<div id="share-buttons"></div>
+
+Post by <img alt="Avatar" height="50" width="50"
+src="http://www.gravatar.com/avatar/f6bdc24da1643ff0943b3dc7a231f38e?s=50" /> <a href="/about.html">Dairon Medina</a>
+on <time datetime="2010-02-11" pubdate="pubdate">11 Feb 2010</time> — <a id="dsq-comment-count" data-disqus-identifier="/2010/02/send-e-mails-with-attachment-in-python" href="/2010/02/send-e-mails-with-attachment-in-python#disqus_thread">0 comments</a>
+
+<div id="disqus_thread"></div>
+<noscript>Sorry but JavaScript must be enabled to see Comments.</noscript>
+<a class="dsq-brlink" href="http://disqus.com" rel="nofollow">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="text/javascript">
+/* Define title and URL for use with share buttons, Disqus, etc. */
+var page_title = 'Send e-mails with attachment in Python';
+var page_slug  = '/2010/02/send-e-mails-with-attachment-in-python';
+var page_url   = 'http://codeadict.org/2010/02/send-e-mails-with-attachment-in-python';
+</script>
+
+
+
+            <div class="clear"></div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="media-links">
+                    <h2>Elsewhere</h2>
+                    <a href="http://www.twitter.com/codeadict">
+                        <img width="116" alt="Follow @codeadict on Twitter" src="/imgs/tweet.png">
+                    </a>
+                    <a href="http://www.linkedin.com/in/codeadict">
+                        <img width="116" alt="Professional Profile on LinkedIn" src="/imgs/linked.png">
+                    </a>
+                    <a href="http://www.bitbucket.org/codeadict" title="Projects on Bitbucket">
+                        <img width="116" alt="Bitbucket" src="/imgs/bitbucket.png">
+                    </a>
+                </div>
+
+                <a href="http://www.fsf.org/associate/support_freedom/join_fsf?referrer=2442" title="Join Free Software Foundation">
+                    <img src="/imgs/fsf.png" alt="Support freedom" title="Help protect your freedom, join the Free Software  Foundation" />
+                </a>
+                </aside>
+
+            <div class="clear"></div>
+        </div>
+
+        <footer>
+        <div id="legal">&copy 2011 Dairon Medina Caro. Powered by <a href="" title="The hackers blog engine">Jekyll</a> </div>
+        <audio src=""></audio>
+        </footer>
+
+    </div>
+</body>

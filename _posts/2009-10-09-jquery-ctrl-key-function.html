@@ -1,0 +1,32 @@
+--- 
+tags: 
+- Jquery
+type: post
+status: publish
+title: Jquery Ctrl + Key function
+meta: 
+  _edit_last: "7940715"
+published: true
+layout: post
+---
+Hello friends, in a recent PHP app im working i needed to make a Control+G key combination in a form to submit the data to a database. I create a Jquery function to make it easy and use with all Control +  combinations, now i share it with the comunity, i hope it can be usefull to someone:
+
+<code>
+$.ctrl = function(key, callback, args) {
+$(document).keydown(function(e) {
+if(!args) args=[]; // IE barks when args is null
+if(e.keyCode == key.charCodeAt(0) &amp;&amp; e.ctrlKey) {
+callback.apply(this, args);
+return false;
+}
+});
+};
+</code>
+
+The function can be called with 3 parameters, the first is the key you should press, second is the callback function to execute when you press the combination, and third is an additional array of arguments to pass to the callback funtion. Here is a function call example.
+
+<code>
+$.ctrl('G', function(s) {
+alert(s);
+}, ["No presiones D"]);
+</code>

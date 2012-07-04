@@ -1,0 +1,20 @@
+--- 
+tags: 
+- GNU/Linux cli
+- kernel drivers
+- security
+- USB
+type: post
+status: publish
+title: Disable USB storage devices in Linux
+meta: 
+  _edit_last: "7940715"
+published: true
+layout: post
+---
+For security reasons, mainly in school are completely disabling USB storage devices on the computers at lab.  It is important because students can bring  a virus or also can leave with any private information. There is an easy way to do it in linux blacklisting the kernel driver:
+<ol>
+	<li>Open <strong>/etc/modprobe.d/blacklist.conf </strong> file.</li>
+	<li>Type that line at end of file<strong> blacklist usb-storage</strong>.</li>
+</ol>
+Now nobody can use a USB memory stick in that computer. To enable it again comment or delete that line.

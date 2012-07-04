@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
-    <title>Dairon Medina Freelancer Software Developer :: {{ page.title }}</title>
+    <title>Dairon Medina Freelancer Software Developer :: Disable USB storage devices in Linux</title>
     <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="Dairon Medina Caro" />
@@ -24,14 +24,40 @@
             <li><a href="/services/">Services</a></li>
             <li><a href="/work.html">Work</a></li>
             <li><a href="/about.html">Contact</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog/">Blog</a></li>
         </ul>
         </header>
 
         <div class="content">
             <article>
 
-            {{ content }}
+            <h2><a href="http://codeadict.org/2009/12/disable-usb-storage-devices-in-linux">Disable USB storage devices in Linux</a></h2>
+
+For security reasons, mainly in school are completely disabling USB storage devices on the computers at lab.  It is important because students can bring  a virus or also can leave with any private information. There is an easy way to do it in linux blacklisting the kernel driver:
+<ol>
+	<li>Open <strong>/etc/modprobe.d/blacklist.conf </strong> file.</li>
+	<li>Type that line at end of file<strong> blacklist usb-storage</strong>.</li>
+</ol>
+Now nobody can use a USB memory stick in that computer. To enable it again comment or delete that line.
+
+
+<div id="share-buttons"></div>
+
+Post by <img alt="Avatar" height="50" width="50"
+src="http://www.gravatar.com/avatar/f6bdc24da1643ff0943b3dc7a231f38e?s=50" /> <a href="/about.html">Dairon Medina</a>
+on <time datetime="2009-12-21" pubdate="pubdate">21 Dec 2009</time> — <a id="dsq-comment-count" data-disqus-identifier="/2009/12/disable-usb-storage-devices-in-linux" href="/2009/12/disable-usb-storage-devices-in-linux#disqus_thread">0 comments</a>
+
+<div id="disqus_thread"></div>
+<noscript>Sorry but JavaScript must be enabled to see Comments.</noscript>
+<a class="dsq-brlink" href="http://disqus.com" rel="nofollow">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="text/javascript">
+/* Define title and URL for use with share buttons, Disqus, etc. */
+var page_title = 'Disable USB storage devices in Linux';
+var page_slug  = '/2009/12/disable-usb-storage-devices-in-linux';
+var page_url   = 'http://codeadict.org/2009/12/disable-usb-storage-devices-in-linux';
+</script>
+
+
 
             <div class="clear"></div>
             </article>

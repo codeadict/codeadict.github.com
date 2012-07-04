@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
-    <title>Dairon Medina Freelancer Software Developer :: {{ page.title }}</title>
+    <title>Dairon Medina Freelancer Software Developer :: Join PDF files in linux</title>
     <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="Dairon Medina Caro" />
@@ -24,14 +24,53 @@
             <li><a href="/services/">Services</a></li>
             <li><a href="/work.html">Work</a></li>
             <li><a href="/about.html">Contact</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog/">Blog</a></li>
         </ul>
         </header>
 
         <div class="content">
             <article>
 
-            {{ content }}
+            <h2><a href="http://codeadict.org/2009/10/join-pdf-files-in-linux">Join PDF files in linux</a></h2>
+
+Hello linux users: in this post i will show how to join two or more PDF files into one. You have to install the Ghostscript driver to do that, typing in a terminal(is for Debian and Ubuntu):
+
+<strong>apt-get install gs
+apt-get install pdftk
+
+</strong>Now<strong> </strong>we join the PDFs with this command:
+
+<strong>gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=unidos.pdf  file1.pdf  file2.pdf
+</strong>
+
+Here is the explanation of command:
+<strong>gs:</strong> Call to the Ghostscript program.
+<strong>-dBATCH:</strong> Close the Ghostscript when terminate the process.
+<strong>-dNOPAUSE:</strong> Dont pause the program to aks for user interaction.
+<strong>-q: </strong>Dont show messages during the process.
+<strong>-sDEVICE=pdfwrite:</strong> Use Ghostscript PDF generator to do the process.
+<strong>-sOutputFile=unidos.pdf:</strong> The name of the result file.
+
+You can also join all PDF files in a directory typing *.pdf.
+
+
+<div id="share-buttons"></div>
+
+Post by <img alt="Avatar" height="50" width="50"
+src="http://www.gravatar.com/avatar/f6bdc24da1643ff0943b3dc7a231f38e?s=50" /> <a href="/about.html">Dairon Medina</a>
+on <time datetime="2009-10-20" pubdate="pubdate">20 Oct 2009</time> — <a id="dsq-comment-count" data-disqus-identifier="/2009/10/join-pdf-files-in-linux" href="/2009/10/join-pdf-files-in-linux#disqus_thread">0 comments</a>
+
+<div id="disqus_thread"></div>
+<noscript>Sorry but JavaScript must be enabled to see Comments.</noscript>
+<a class="dsq-brlink" href="http://disqus.com" rel="nofollow">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="text/javascript">
+/* Define title and URL for use with share buttons, Disqus, etc. */
+var page_title = 'Join PDF files in linux';
+var page_slug  = '/2009/10/join-pdf-files-in-linux';
+var page_url   = 'http://codeadict.org/2009/10/join-pdf-files-in-linux';
+</script>
+
+
 
             <div class="clear"></div>
             </article>

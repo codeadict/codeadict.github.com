@@ -1,4 +1,5 @@
 markdown: rdiscount
+pygments: true
 permalink: /:year/:month/:title
 url: http://codeadict.org
 exclude: [ README ]

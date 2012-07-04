@@ -1,0 +1,50 @@
+--- 
+tags: 
+- email
+- Programming
+- Python
+- smtplib
+type: post
+status: publish
+title: Send e-mails with attachment in Python
+meta: 
+  _edit_last: "7940715"
+published: true
+layout: post
+---
+Now im working on a little applicatithat have to send emails with attachments in python, I make that code that can be reusable to someone:
+
+[sourcecode language="python"]
+# -*- coding: iso-8859-1 -*-
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
+from email.mime.multipart import MIMEMultipart
+from smtplib import SMTP
+
+msg = MIMEMultipart()
+msg['Subject'] = 'Email From Python jajaja'
+msg['From'] = 'dairon@ceac.cu'
+msg['Reply-to'] = 'otroemail@dominio'
+msg['To'] = 'rms@gnu.org'
+
+# That is what u see if dont have an email reader:
+msg.preamble = 'Multipart massage.\n'
+
+# This is the textual part:
+part = MIMEText(&quot;Hello im sending an email from a python program&quot;)
+msg.attach(part)
+
+# This is the binary part(The Attachment):
+part = MIMEApplication(open(&quot;file.pdf&quot;,&quot;rb&quot;).read())
+part.add_header('Content-Disposition', 'attachment', filename=&quot;file.pdf&quot;)
+msg.attach(part)
+
+# Create an instance in SMTP server
+smtp = SMTP(&quot;smtp.domain.cu&quot;)
+# Start the server:
+smtp.ehlo()
+smtp.login(&quot;yo@example.com&quot;, &quot;mipassword&quot;)
+
+# Send the email
+smtp.sendmail(msg['From'], msg['To'], msg.as_string())
+[/sourcecode]

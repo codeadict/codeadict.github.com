@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 
-    <title>Dairon Medina Freelancer Software Developer :: {{ page.title }}</title>
+    <title>Dairon Medina Freelancer Software Developer :: Calcular el trimestre actual en PHP</title>
     <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="Dairon Medina Caro" />
@@ -24,14 +24,46 @@
             <li><a href="/services/">Services</a></li>
             <li><a href="/work.html">Work</a></li>
             <li><a href="/about.html">Contact</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog/">Blog</a></li>
         </ul>
         </header>
 
         <div class="content">
             <article>
 
-            {{ content }}
+            <h2><a href="http://codeadict.org/2009/05/calcular-el-trimestre-actual-en-php">Calcular el trimestre actual en PHP</a></h2>
+
+Hola amigos, ayer mientras trabajaba me vi en la necesidad de calcular el trimestre del año dado el número del mes y cree esta pequeña función en PHP que permite realizar este cálculo, si no se le pasa ningún mes ella tomará el mes actual por defecto. Aquí les dejo el código para quien pueda ser útil:
+
+[sourcecode language="php"]
+&lt;?php
+function trimestre($mes=null)
+{
+$mes = is_null($mes) ? date('m') : $mes;
+$trim=floor(($mes-1) / 3)+1;
+return $trim;
+}
+?&gt;
+[/sourcecode]
+
+
+<div id="share-buttons"></div>
+
+Post by <img alt="Avatar" height="50" width="50"
+src="http://www.gravatar.com/avatar/f6bdc24da1643ff0943b3dc7a231f38e?s=50" /> <a href="/about.html">Dairon Medina</a>
+on <time datetime="2009-05-07" pubdate="pubdate">07 May 2009</time> — <a id="dsq-comment-count" data-disqus-identifier="/2009/05/calcular-el-trimestre-actual-en-php" href="/2009/05/calcular-el-trimestre-actual-en-php#disqus_thread">0 comments</a>
+
+<div id="disqus_thread"></div>
+<noscript>Sorry but JavaScript must be enabled to see Comments.</noscript>
+<a class="dsq-brlink" href="http://disqus.com" rel="nofollow">Blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<script type="text/javascript">
+/* Define title and URL for use with share buttons, Disqus, etc. */
+var page_title = 'Calcular el trimestre actual en PHP';
+var page_slug  = '/2009/05/calcular-el-trimestre-actual-en-php';
+var page_url   = 'http://codeadict.org/2009/05/calcular-el-trimestre-actual-en-php';
+</script>
+
+
 
             <div class="clear"></div>
             </article>
