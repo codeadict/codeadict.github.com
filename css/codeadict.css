@@ -218,6 +218,19 @@ blockquote{
     color: #2F2F2F;
     font: italic 12px/18px Arial,Helvetica,sans-serif;
 }
+.highlight {
+    margin: 1em 0;
+    padding: 10px;
+    background: none repeat scroll 0 0 #222222;
+    overflow: auto;
+    border: dashed 2px #e5e5e5;
+}
+
+pre code {
+    color: #F0F0F0;
+    background-color: inherit;
+    padding: 0;
+}
 
 footer {
     position: relative;
@@ -271,4 +284,3 @@ a.dsq-brlink {
 
 ::-moz-selection { background-color: #FCFFF0; color: #D12B36; text-shadow: none; }
 ::selection { background-color: #FCFFF0; color: #D12B36; text-shadow: none; }
-
