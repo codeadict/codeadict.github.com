@@ -11,7 +11,7 @@ layout: post
 ---
 Hello friends, in a recent PHP app im working i needed to make a Control+G key combination in a form to submit the data to a database. I create a Jquery function to make it easy and use with all Control +  combinations, now i share it with the comunity, i hope it can be usefull to someone:
 
-<code>
+{% highlight javascript }
 $.ctrl = function(key, callback, args) {
 $(document).keydown(function(e) {
 if(!args) args=[]; // IE barks when args is null
@@ -21,12 +21,12 @@ return false;
 }
 });
 };
-</code>
+{ endhighlight %}
 
 The function can be called with 3 parameters, the first is the key you should press, second is the callback function to execute when you press the combination, and third is an additional array of arguments to pass to the callback funtion. Here is a function call example.
 
-<code>
+{% highlight javascript }
 $.ctrl('G', function(s) {
 alert(s);
 }, ["No presiones D"]);
-</code>
+{ endhighlight %}
