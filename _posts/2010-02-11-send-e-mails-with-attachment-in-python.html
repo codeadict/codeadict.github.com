@@ -14,7 +14,8 @@ layout: post
 ---
 Now im working on a little applicatithat have to send emails with attachments in python, I make that code that can be reusable to someone:
 
-[sourcecode language="python"]
+
+{% highlight python linenos %}
 # -*- coding: iso-8859-1 -*-
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
@@ -23,7 +24,7 @@ from smtplib import SMTP
 
 msg = MIMEMultipart()
 msg['Subject'] = 'Email From Python jajaja'
-msg['From'] = 'dairon@ceac.cu'
+msg['From'] = 'dairon.medina@gmail.com'
 msg['Reply-to'] = 'otroemail@dominio'
 msg['To'] = 'rms@gnu.org'
 
@@ -47,4 +48,4 @@ smtp.login(&quot;yo@example.com&quot;, &quot;mipassword&quot;)
 
 # Send the email
 smtp.sendmail(msg['From'], msg['To'], msg.as_string())
-[/sourcecode]
+{% endhighlight %}

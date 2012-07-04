@@ -11,13 +11,16 @@ layout: post
 ---
 Hello linux users: in this post i will show how to join two or more PDF files into one. You have to install the Ghostscript driver to do that, typing in a terminal(is for Debian and Ubuntu):
 
-<strong>apt-get install gs
+{% highlight bash %}
+apt-get install gs
 apt-get install pdftk
+{% endhighlight %}
 
-</strong>Now<strong> </strong>we join the PDFs with this command:
+Now we join the PDFs with this command:
 
-<strong>gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=unidos.pdf  file1.pdf  file2.pdf
-</strong>
+{% highlight bash %}
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=unidos.pdf  file1.pdf  file2.pdf
+{% endhighlight %}
 
 Here is the explanation of command:
 <strong>gs:</strong> Call to the Ghostscript program.
