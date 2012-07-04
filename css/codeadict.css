@@ -125,7 +125,6 @@ ul#topnav li {
 ul#topnav li a {
     outline: 0 none;
     color:#EEEEEE !important;
-    -moz-border-radius:3px 3px 3px 3px;
     background-color:#333333;
     font-family:"myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",Myriad,"Trebuchet MS",sans-serif;
     font-weight:700;
@@ -138,7 +137,9 @@ ul#topnav li a {
     -moz-transition: opacity .5s ease-in-out;
     -webkit-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
-
+    -moz-border-radius:3px 3px 3px 3px;
+    -webkit-border-radius:3px 3px 3px 3px;
+    border-radius:3px 3px 3px 3px;
 }
 
 ul#topnav li a:hover {
