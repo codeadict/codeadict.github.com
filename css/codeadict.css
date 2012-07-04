@@ -63,6 +63,9 @@ h3 {
 h4, h5, h6 {
     font-size: 16px;
 }
+.content p{
+    font-family: 'Marck Script', cursive;
+}
 p {
     margin: 0 0 20px 0;
     padding: 0;
