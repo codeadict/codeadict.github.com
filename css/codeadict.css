@@ -83,7 +83,7 @@ a img {
     overflow:visible;
     min-height:100%;
     position:relative;
-    background:url("/imgs/bg.png") repeat scroll 0 0 transparent;
+    background: #100001 url("/imgs/bg.jpg") no-repeat scroll 0 0;
 }
 
 header {
