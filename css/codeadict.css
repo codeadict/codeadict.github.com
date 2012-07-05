@@ -280,6 +280,30 @@ a.dsq-brlink {
     font-size: 13px !important;
 }
 
+/** Forms **/
+#contact label {
+            margin: 11px 20px 0 0 !important;
+            font-size: 16px; color: #b3aba1 !important;
+            text-transform: uppercase !important;
+            text-shadow: 0px 1px 0px #fff !important;
+        }
+ 
+input[type=text], textarea {
+        font: 14px normal normal uppercase helvetica, arial, sans-serif !important;
+        color: #7c7873 !important;
+	background:#F7F2EC !important;
+        width: 380px !important; height: 36px !important; padding: 0px 10px !important; margin: 0 0 10px 0 !important;
+        border:1px solid #f8f5f1 !important;
+        -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+        -moz-box-shadow: inset 0px 0px 1px #726959;
+        -webkit-box-shadow:  inset 0px 0px 1px #b3a895;
+        box-shadow:  inset 0px 0px 1px #b3a895;
+        }  
+ 
+textarea { height: 80px !important; padding-top:14px !important;}
+ 
+textarea:focus, input[type=text]:focus {background:rgba(255,255,255,.35) !important;}
+
 /** Helpers **/
 .clear{
     clear: both;
