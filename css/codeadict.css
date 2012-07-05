@@ -155,7 +155,7 @@ ul#topnav li a:hover {
 /** KONTENT **/
 div.content{
     background: none repeat scroll 0 0 #FFFFFF;
-    border: 5px solid rgba(0, 0, 0, 0.4);
+    border: 5px solid rgba(0, 0, 0, 0.3);
     margin: 0.6em auto auto;
     min-height: 2em;
     padding: 5px;
