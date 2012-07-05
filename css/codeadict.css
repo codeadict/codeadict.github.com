@@ -155,12 +155,13 @@ ul#topnav li a:hover {
 /** KONTENT **/
 div.content{
     background: none repeat scroll 0 0 #FFFFFF;
-    border: thin solid #DEDEDE;
+    border: 5px solid rgba(0, 0, 0, 0.4);
     margin: 0.6em auto auto;
     min-height: 2em;
     padding: 5px;
     position: relative;
     width: 790px;
+    
 }
 div.content article{
     float: left;
@@ -238,7 +239,7 @@ footer {
     clear: both;
     margin-top: 5px;
     padding: 10px 0;
-    color: #212121;
+    color: color: #999999;
 }
 
 footer > div {
@@ -250,7 +251,8 @@ footer > div#legal {
 /* Disqus comments */
 
 #disqus_thread {
-    border-top: 4px solid #ddd;
+    border-top: 1px solid #111111;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
 }
 #dsq-content {
     font-size: 13px !important;
