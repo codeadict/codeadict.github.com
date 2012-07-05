@@ -288,7 +288,7 @@ a.dsq-brlink {
             text-shadow: 0px 1px 0px #fff !important;
         }
  
-input[type=text], textarea {
+#contact input[type=text], textarea {
         font: 14px normal normal uppercase helvetica, arial, sans-serif !important;
         color: #7c7873 !important;
 	background:#F7F2EC !important;
@@ -300,9 +300,9 @@ input[type=text], textarea {
         box-shadow:  inset 0px 0px 1px #b3a895;
         }  
  
-textarea { height: 80px !important; padding-top:14px !important;}
+#contact textarea { height: 80px !important; padding-top:14px !important;}
  
-textarea:focus, input[type=text]:focus {background:rgba(255,255,255,.35) !important;}
+#contact textarea:focus, input[type=text]:focus {background:rgba(255,255,255,.35) !important;}
 
 /** Helpers **/
 .clear{
