@@ -83,7 +83,7 @@ a img {
     overflow:visible;
     min-height:100%;
     position:relative;
-    background: url("/imgs/bg-gradient.png") repeat-x scroll center top, url("/imgs/activity.png") repeat-x scroll center bottom, url("/imgs/bg-tile.png") repeat scroll 0 0 #252731;
+    background: url("/imgs/bg-gradient.png") repeat-x scroll center top, url("/imgs/activity.png") repeat-x scroll center bottom, url("/imgs/bg-tile.png") repeat scroll 0 0 #252731, url("/imgs/mebg.png") no-repeat scroll right bottom;
 }
 
 header {
