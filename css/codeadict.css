@@ -18,7 +18,7 @@ a img {
    border: none
 }
 
-aside, details, figcaption, figure, 
+aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {display: block}
 
 
@@ -160,7 +160,7 @@ div.content{
     padding: 5px;
     position: relative;
     width: 790px;
-    
+
 }
 div.content article{
     float: left;
@@ -183,16 +183,9 @@ article p .dmpic{
     margin-right: 5px;
     padding: 0px;
     border: 1px solid #DEDEDE;
-    width: 121px;
-    height: 162px;
-    background: transparent url('/imgs/dairon.png') no-repeat left;
-    -moz-transition: fade .8s ease-in-out;
-    -webkit-transition: opacity .8s ease-in-out;
-    transition: opacity .8s ease-in-out;
-
-}
-article p .dmpic:hover{
-    background-position: -121px 0;
+    width: 194px;
+    height: 242px;
+    background: transparent url('/imgs/daironm.jpg') no-repeat left;
     -moz-transition: fade .8s ease-in-out;
     -webkit-transition: opacity .8s ease-in-out;
     transition: opacity .8s ease-in-out;
@@ -286,7 +279,7 @@ a.dsq-brlink {
             text-transform: uppercase !important;
             text-shadow: 0px 1px 0px #fff !important;
         }
- 
+
 #contact input[type=text], textarea {
         font: 14px normal normal uppercase helvetica, arial, sans-serif !important;
         color: #7c7873 !important;
@@ -297,10 +290,10 @@ a.dsq-brlink {
         -moz-box-shadow: inset 0px 0px 1px #726959;
         -webkit-box-shadow:  inset 0px 0px 1px #b3a895;
         box-shadow:  inset 0px 0px 1px #b3a895;
-        }  
- 
+        }
+
 #contact textarea { height: 80px !important; padding-top:14px !important;}
- 
+
 #contact textarea:focus, input[type=text]:focus {background:rgba(255,255,255,.35) !important;}
 
 /** Helpers **/

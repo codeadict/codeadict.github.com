@@ -51,16 +51,30 @@
                     </a>
                 </div>
 
-                <a href="http://www.fsf.org/associate/support_freedom/join_fsf?referrer=2442" title="Join Free Software Foundation">
-                    <img src="/imgs/fsf.png" alt="Support freedom" title="Help protect your freedom, join the Free Software  Foundation" />
-                </a>
+                <!--
+    PeoplePerHour Profile Widget
+    The div#pph-hire me is the element
+    where the iframe will be inserted.
+    You may move this element wherever
+    you need to display the widget
+-->
+<div id="pph-hireme"></div>
+<script type="text/javascript">
+(function(d, s) {
+    var useSSL = 'https:' == document.location.protocol;
+    var js, where = d.getElementsByTagName(s)[0],
+    js = d.createElement(s);
+    js.src = (useSSL ? 'https:' : 'http:') +  '//www.peopleperhour.com/hire/1093855541/422307.js?width=200&height=262&orientation=vertical&theme=light&hourlies=44229%2C181525&rnd='+parseInt(Math.random()*10000, 10);
+    try { where.parentNode.insertBefore(js, where); } catch (e) { if (typeof console !== 'undefined' && console.log && e.stack) { console.log(e.stack); } }
+}(document, 'script'));
+</script>
                 </aside>
 
             <div class="clear"></div>
         </div>
 
         <footer>
-        <div id="legal">&copy 2011 Dairon Medina Caro. Powered by <a href="" title="The hackers blog engine">Jekyll</a> </div>
+        <div id="legal">&copy 2015 Dairon Medina Caro. Powered by <a href="" title="The hackers blog engine">Jekyll</a> </div>
         <audio src=""></audio>
         </footer>
 
