@@ -1,83 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Dairon Medina Freelancer Software Developer :: {{ page.title }}</title>
-    <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
-    <meta name="generator" content="Jekyll" />
-    <meta name="author" content="Dairon Medina Caro" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="shortcut icon" href="/imgs/favicon.ico" />
-    <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/codeadict.css?v=1">
-    <link rel="stylesheet" href="/css/railscasts.css?v=1">
-</head>
-<body>
-    <div id="wrapper">
+  {% include head.html %}
 
-        <header>
-        <ul id="topnav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><a href="/work.html">Work</a></li>
-            <li><a href="/about.html">Contact</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-        </ul>
-        </header>
+  <body class="theme-jekyll">
+    {% include sidebar.html %}
 
-        <div class="content">
-            <article>
-
-            {{ content }}
-
-            <div class="clear"></div>
-            </article>
-
-            <aside class="sidebar">
-            <!-- Place this tag where you want the button to render -->
-                <a name="freelancer_Hireme" user_id="2167760" size="small" annotation="bubble" title="Hire me! on Freelancer.com" href="https://www.freelancer.com/users/2167760.html">Python Developer</a>
-                <div class="media-links">
-                    <h2>Elsewhere</h2>
-                    <a href="http://www.twitter.com/codeadict">
-                        <img width="116" alt="Follow @codeadict on Twitter" src="/imgs/tweet.png">
-                    </a>
-                    <a href="http://www.linkedin.com/in/codeadict">
-                        <img width="116" alt="Professional Profile on LinkedIn" src="/imgs/linked.png">
-                    </a>
-                    <a href="http://www.bitbucket.org/codeadict" title="Projects on Bitbucket">
-                        <img width="116" alt="Bitbucket" src="/imgs/bitbucket.png">
-                    </a>
-                </div>
-
-                <!--
-    PeoplePerHour Profile Widget
-    The div#pph-hire me is the element
-    where the iframe will be inserted.
-    You may move this element wherever
-    you need to display the widget
--->
-<div id="pph-hireme"></div>
-<script type="text/javascript">
-(function(d, s) {
-    var useSSL = 'https:' == document.location.protocol;
-    var js, where = d.getElementsByTagName(s)[0],
-    js = d.createElement(s);
-    js.src = (useSSL ? 'https:' : 'http:') +  '//www.peopleperhour.com/hire/1093855541/422307.js?width=200&height=262&orientation=vertical&theme=light&hourlies=44229%2C181525&rnd='+parseInt(Math.random()*10000, 10);
-    try { where.parentNode.insertBefore(js, where); } catch (e) { if (typeof console !== 'undefined' && console.log && e.stack) { console.log(e.stack); } }
-}(document, 'script'));
-</script>
-                </aside>
-
-            <div class="clear"></div>
-        </div>
-
-        <footer>
-        <div id="legal">&copy 2015 Dairon Medina Caro. Powered by <a href="" title="The hackers blog engine">Jekyll</a> </div>
-        <audio src=""></audio>
-        </footer>
-
+    <div class="content container">
+      {{ content }}
     </div>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -85,7 +15,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
 		<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
 	<![endif]-->
-	<script type="text/javascript" src="/js/innerfade.js"></script>
+	  <script type="text/javascript" src="/js/innerfade.js"></script>
     <script type="text/javascript" src="/js/site.js"></script>
     <script type="text/javascript">
                 (function() {
