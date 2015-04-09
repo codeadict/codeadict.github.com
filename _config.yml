@@ -2,6 +2,9 @@ markdown: rdiscount
 pygments: true
 url: http://codeadict.org
 exclude: [ README ]
+safe: true
+lsi: false
+excerpt_separator: <!--more-->
 
 # Permalinks
 permalink:        pretty
