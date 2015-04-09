@@ -1,11 +1,11 @@
---- 
-tags: 
+---
+tags:
 - PHP
 - Programming
 type: post
 status: publish
 title: Calcular el trimestre actual en PHP
-meta: 
+meta:
   _edit_last: "7940715"
 published: true
 layout: post
@@ -13,12 +13,11 @@ layout: post
 Hola amigos, ayer mientras trabajaba me vi en la necesidad de calcular el trimestre del año dado el número del mes y cree esta pequeña función en PHP que permite realizar este cálculo, si no se le pasa ningún mes ella tomará el mes actual por defecto. Aquí les dejo el código para quien pueda ser útil:
 
 {% highlight php linenos %}
-&lt;?php
-function trimestre($mes=null)
-{
-$mes = is_null($mes) ? date('m') : $mes;
-$trim=floor(($mes-1) / 3)+1;
-return $trim;
+<?php
+function trimestre($mes=null){
+  $mes = is_null($mes) ? date('m') : $mes;
+  $trim=floor(($mes-1) / 3)+1;
+  return $trim;
 }
-?&gt;
+?>;
 {% endhighlight %}

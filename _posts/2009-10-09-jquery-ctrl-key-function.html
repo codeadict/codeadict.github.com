@@ -1,10 +1,10 @@
---- 
-tags: 
+---
+tags:
 - Jquery
 type: post
 status: publish
 title: Jquery Ctrl + Key function
-meta: 
+meta:
   _edit_last: "7940715"
 published: true
 layout: post
@@ -13,13 +13,13 @@ Hello friends, in a recent PHP app im working i needed to make a Control+G key c
 
 {% highlight javascript linenos %}
 $.ctrl = function(key, callback, args) {
-$(document).keydown(function(e) {
-if(!args) args=[]; // IE barks when args is null
-if(e.keyCode == key.charCodeAt(0) &amp;&amp; e.ctrlKey) {
-callback.apply(this, args);
-return false;
-}
-});
+  $(document).keydown(function(e) {
+    if(!args) args=[]; // IE barks when args is null
+    if(e.keyCode == key.charCodeAt(0) &amp;&amp; e.ctrlKey) {
+      callback.apply(this, args);
+      return false;
+    }
+  });
 };
 {% endhighlight %}
 
@@ -27,6 +27,6 @@ The function can be called with 3 parameters, the first is the key you should pr
 
 {% highlight javascript linenos %}
 $.ctrl('G', function(s) {
-alert(s);
-}, ["No presiones D"]);
+  alert(s);
+}, ["Hey bro dont press G"]);
 {% endhighlight %}

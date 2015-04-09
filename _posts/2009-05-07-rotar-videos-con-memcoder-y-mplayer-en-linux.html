@@ -1,12 +1,12 @@
---- 
-tags: 
+---
+tags:
 - GNU/Linux cli
 - mplayer
 - video
 type: post
 status: publish
 title: Rotar videos con memcoder y mplayer en linux
-meta: 
+meta:
   _wp_old_slug: rotar-videos-con-memcoder-y-mplayer-en-linux-2
   _edit_last: "7940715"
 published: true
@@ -16,26 +16,30 @@ A veces nos encontramos con vídeos que se encuentran rotados, como los copiados
 
 Si desea rotar su vídeo y guardarlo ya en la posición que desea puede hacerlo con MENCODER de la siguiente forma:
 
-Valla a Aplicaciones---&gt;Terminal y teclee el siguiente comando:
+Abra una terminal y teclee el siguiente comando:
 
+{% highlight bash %}
 mencoder -vf-add rotate=opción -oac mp3lame -ovc lavc /lugar/video_entrada.extensión -o /lugar/video_salida.extensión
+{% endhighlight %}
 
 Donde:
 
--oac es el codec de salida de audio(Output Audio Codec) pude utilizar otro si Mp3lame no está disponible
+* -oac es el codec de salida de audio(Output Audio Codec) pude utilizar otro si Mp3lame no está disponible
 
--ovc es el codec de salida de vídeo(Output Video Codec)
+* -ovc es el codec de salida de vídeo(Output Video Codec)
 
 Si solo desea ver el vídeo rotado sin guardarlo puede usar <a href="http://www.mplayerhq.hu/">Mplayer</a> mediante el siguiente comando:
 
+{% highlight bash %}
 mplayer -vf-add rotate=opción /lugar/video_entrada.extensión
+{% endhighlight %}
 
-opción: es la rotación que se le dará al vídeo, se pueden usar las siguientes:
+**opción:** es la rotación que se le dará al vídeo, se pueden usar las siguientes:
 
-0    Rotar 90 grados en sentido horario y voltear.
+* 0    Rotar 90 grados en sentido horario y voltear.
 
-1    Rotar 90 grados en sentido horario.
+* 1    Rotar 90 grados en sentido horario.
 
-2    Rotar 90 grados a la izquierda.
+* 2    Rotar 90 grados a la izquierda.
 
-3    Rotar 90 grados a la izquierda y voltear.
+* 3    Rotar 90 grados a la izquierda y voltear.
