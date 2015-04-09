@@ -195,13 +195,13 @@ a.dsq-brlink {
 
 #contact textarea:focus, input[type=text]:focus {background:rgba(255,255,255,.35) !important;}
 
-article p img.right{
+.content p img.right{
     float: left;
     margin-right: 5px;
     padding: 2px;
     border: 1px solid #DEDEDE;
 }
-article p .dmpic{
+.content p .dmpic{
     display: block;
     float: left;
     margin-right: 5px;
