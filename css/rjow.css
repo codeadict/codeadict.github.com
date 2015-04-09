@@ -138,3 +138,79 @@ tbody tr:nth-child(odd) th {
   margin-top: 5rem;
   color: #aaa;
 }
+
+/* Disqus comments */
+
+#disqus_thread {
+    border-top: 1px solid #111111;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+#dsq-content {
+    font-size: 13px !important;
+}
+#dsq-content #dsq-global-toolbar, #dsq-content ul.dsq-login-buttons, #dsq-content div.dsq-options,
+#dsq-content #dsq-comments, #dsq-content #dsq-pagination {
+    margin-bottom: 20px !important;
+}
+div.dsq-tooltip-small {
+    width: auto;
+}
+#dsq-content ul.dsq-login-buttons {
+    padding-top: 10px !important;
+}
+#dsq-comment-count {
+    background: url('/imgs/comment.png') no-repeat left top;
+    padding-left: 20px;
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+#dsq-footer a > em {
+    text-decoration: none !important;
+}
+a.dsq-brlink {
+    font-size: 13px !important;
+}
+
+/** Forms **/
+#contact label {
+            margin: 11px 20px 0 0 !important;
+            font-size: 16px; color: #b3aba1 !important;
+            text-transform: uppercase !important;
+            text-shadow: 0px 1px 0px #fff !important;
+        }
+
+#contact input[type=text], textarea {
+        font: 14px normal normal uppercase helvetica, arial, sans-serif !important;
+        color: #7c7873 !important;
+  background:#F7F2EC !important;
+        width: 380px !important; height: 36px !important; padding: 0px 10px !important; margin: 0 0 10px 0 !important;
+        border:1px solid #f8f5f1 !important;
+        -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+        -moz-box-shadow: inset 0px 0px 1px #726959;
+        -webkit-box-shadow:  inset 0px 0px 1px #b3a895;
+        box-shadow:  inset 0px 0px 1px #b3a895;
+        }
+
+#contact textarea { height: 80px !important; padding-top:14px !important;}
+
+#contact textarea:focus, input[type=text]:focus {background:rgba(255,255,255,.35) !important;}
+
+article p img.right{
+    float: left;
+    margin-right: 5px;
+    padding: 2px;
+    border: 1px solid #DEDEDE;
+}
+article p .dmpic{
+    display: block;
+    float: left;
+    margin-right: 5px;
+    padding: 0px;
+    border: 1px solid #DEDEDE;
+    width: 194px;
+    height: 242px;
+    background: transparent url('/imgs/daironm.jpg') no-repeat left;
+    -moz-transition: fade .8s ease-in-out;
+    -webkit-transition: opacity .8s ease-in-out;
+    transition: opacity .8s ease-in-out;
+}
