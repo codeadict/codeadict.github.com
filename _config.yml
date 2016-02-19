@@ -1,5 +1,5 @@
 markdown: rdiscount
-pygments: true
+highlighter: rouge
 url: http://codeadict.org
 exclude: [ README ]
 safe: true

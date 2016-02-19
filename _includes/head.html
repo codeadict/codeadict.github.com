@@ -1,29 +1,34 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
   <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <title>
     {% if page.title %}
-      {{ page.title }} &middot; {{ site.title }}
+    {{ page.title }} &middot; {{ site.title }}
     {% else %}
-      {{ site.title }} &middot; {{ site.tagline }}
+    {{ site.title }} &middot; {{ site.tagline }}
     {% endif %}
   </title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/poole.css">
-  <link rel="stylesheet" href="/css/hyde.css">
-  <link rel="stylesheet" href="/css/rjow.css">
-  <link rel="stylesheet" href="/css/syntax.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <meta property="og:site_name" content="Dairon Medina">
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="favicon.ico">
+  <meta property="og:title" content="Independent full stack software developer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://codeadict.github.com">
+  <meta property="og:image" content="http://codeadict.github.com/imgs/me.png">
+
+  <meta name="author" content="Dairon Medina">
   <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
   <meta name="generator" content="Jekyll" />
-  <meta name="author" content="Dairon Medina Caro" />
-</head>
+  <mmeta name="description" content="Dairon Medina(codeadict), Independent full stack software developer, pythonista, Linux and Open Source advocate living in sunny Indian Rocks Beach, Florida.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/lib/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  </head>

@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="theme-jekyll">
-    {% include sidebar.html %}
+<body>
 
-    <div class="content container">
-      {{ content }}
+  <div id="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="avatar">
+            <a href="/">
+              <img src="/imgs/me.png" alt="Dairon Medina" class="avatar img-circle" />
+            </a>
+            <h1>Dairon Medina (@codeadict)</h1>
+            <h2>software developer</h2>
+
+            <p>
+              <span class="icon-location"></span>
+              Indian Rocks Beach, FL, Planet Earth (27.9284859,-82.755531,13 - UTC-05)
+            </p>
+          </p>
+          <h3 class="home-top-links">
+            <a href="/">About</a> &bull;
+            <a href="/index.html">Résumé</a> &bull;
+            <a href="/blog">Blog</a>
+          </h3>
+        </div>
+      </div>
     </div>
+    <div class="container">
+      <div class="row">
+        {{ content }}
+      </div>
+    </div>
+  </div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<!--[if lt IE 7 ]>
-		<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-		<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
-	<![endif]-->
-	  <script type="text/javascript" src="/js/innerfade.js"></script>
-    <script type="text/javascript" src="/js/site.js"></script>
-    <script type="text/javascript">
-                (function() {
-                var po = document.createElement("script");
-                po.type = "text/javascript";
-                po.async = true;
-                po.src = ("https:" == document.location.protocol ? "https" : "http") + "://www.freelancer.com/js/hireme/widget.js";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(po, s);
-                })();
-    </script>
+  <div id="footer" class="home-footer">
+    <div class="container">
+      <a href="http://codeadict.github.com">Copyleft Dairon Medina (@codeadict)</a></li>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike</a>
+    </div>
+  </div>
+
+
+  <!-- scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+  <!--[if lt IE 7 ]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+  <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+  <![endif]-->
+  <script type="text/javascript" src="/js/innerfade.js"></script>
+  <script type="text/javascript" src="/js/site.js"></script>
 </body>
