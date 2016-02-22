@@ -6,7 +6,8 @@ tags:
 - ubuntu
 - linux
 published: true
-title: Setting up a Golang development environment on Ubuntu Linux.
+title: Setting up a Golang development environment on Ubuntu Linux
+image: golang_coffee.jpg
 ---
 ![Haking Golang]({{ site.url }}/imgs/golang_coffee.jpg)
 
