@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-url: http://codeadict.github.io
+url: http://codeadict.github.com
 exclude: [ README ]
 safe: true
 lsi: false
