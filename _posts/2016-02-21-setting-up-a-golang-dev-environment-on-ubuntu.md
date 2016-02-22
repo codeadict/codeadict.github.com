@@ -11,7 +11,7 @@ image: golang_coffee.jpg
 ---
 ![Haking Golang]({{ site.url }}/imgs/golang_coffee.jpg)
 
-I am actually in the process of learning the Go programming language. I'm not only doing this because i believe that it's an important skill to add to my Resume, but also because it's a compiled language, similar to C/C++ stack but with nicer syntax and also because is has a pretty powerful web server built-in and creating web services its very fast process with it. Also being a compiled language, distributing and deploying apps is very simple process. And finally because the [dev team](https://en.wikipedia.org/wiki/Go_%28programming_language%29) behind go have a great track creating powerful languages.
+I am actually in the process of learning the Go programming language. I'm not only doing this because i believe that it's an important skill to add to my Resume, but also because it's a compiled language, similar to C/C++ stack but with nicer syntax and also because is has a pretty powerful web server built-in and creating web services its very straightforward process. Also being a compiled language, distributing and deploying apps is very simple. And finally because the [dev team](https://en.wikipedia.org/wiki/Go_%28programming_language%29) behind go have a great track creating powerful languages.
 
 This guide intends to help the novice starter in Golang, like me, to set up a development environment fast and without the headaches of compiling the language itself. This tutorial assumes you have a basic understanding of Linux commandline and at least have a notion of what is Golang and how it works. If you don't have it don't worry, reading [this great book](http://www.gopl.io/) can help you a lot. So here we go:
 
