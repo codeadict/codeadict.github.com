@@ -68,26 +68,26 @@
   <time datetime="2012-10-22T00:00:00-04:00" class="page-date">22 Oct 2012</time>
   <p>Hi, on an application im working on that generates very long urls and need to show it easy for users i thinked on some online services that generates short URLs like bit.li or goo.gl and come with that script to make the urls shorten from Python programing language, i decided to use goo.gl service as im a huge Google fan. Here is the code i wrote and hopes can be usefull for someone</p>
 
-<p><figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">quote</span>
 <span class="kn">from</span> <span class="nn">urllib2</span> <span class="kn">import</span> <span class="n">urlopen</span><span class="p">,</span> <span class="n">Request</span><span class="p">,</span> <span class="n">HTTPError</span>
-<span class="kn">import</span> <span class="nn">simplejson</span> <span class="kn">as</span> <span class="nn">json</span></p>
+<span class="kn">import</span> <span class="nn">simplejson</span> <span class="kn">as</span> <span class="nn">json</span>
 
-<p><span class="k">def</span> <span class="nf">make_short_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">make_short_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
   <span class="s">"""
   Shorten a URL with goo.gl
   """</span>
   <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">'http://'</span><span class="p">,</span><span class="n">url</span><span class="p">):</span>
     <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Invalid URL'</span><span class="p">)</span>
   <span class="k">try</span><span class="p">:</span>
-    <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://goo.gl/api/url'</span><span class="p">,</span><span class="s">'url=</span><span class="si">%</span><span class="s">s'</span><span class="o">%</span><span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">),</span>       <br/>
-                    <span class="p">{</span><span class="s">'UserAgent'</span><span class="p">:</span><span class="s">'Python'</span><span class="p">}))</span>
+    <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://goo.gl/api/url'</span><span class="p">,</span><span class="s">'url=</span><span class="si">%</span><span class="s">s'</span><span class="o">%</span><span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">),</span>			
+    				<span class="p">{</span><span class="s">'UserAgent'</span><span class="p">:</span><span class="s">'Python'</span><span class="p">}))</span>
   <span class="k">except</span> <span class="n">HTTPError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
     <span class="n">json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
     <span class="k">if</span> <span class="s">'short_url'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">json</span><span class="p">:</span>
       <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Server has returned Invalid Response'</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">json</span><span class="p">[</span><span class="s">'short_url'</span><span class="p">]</span>
-  <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Unknown error has Ocurred.'</span><span class="p">)</span></code></pre></figure></p>
+  <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Unknown error has Ocurred.'</span><span class="p">)</span></code></pre></figure>
 
   <div id="share-buttons"></div>
 
@@ -104,6 +104,15 @@
     
       <li>
         <h3>
+          <a href="/2016/02/21/setting-up-a-golang-dev-environment-on-ubuntu/">
+            Setting up a Golang development environment on Ubuntu Linux.
+            <small><time datetime="2016-02-21T00:00:00-05:00">21 Feb 2016</time></small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
           <a href="/2011/03/29/good-bye-eclipse-say-hello-to-vim/">
             Good bye Eclipse, say hello to Vim
             <small><time datetime="2011-03-29T00:00:00-04:00">29 Mar 2011</time></small>
@@ -116,15 +125,6 @@
           <a href="/2010/02/11/send-e-mails-with-attachment-in-python/">
             Send e-mails with attachment in Python
             <small><time datetime="2010-02-11T00:00:00-05:00">11 Feb 2010</time></small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/2009/12/21/disable-usb-storage-devices-in-linux/">
-            Disable USB storage devices in Linux
-            <small><time datetime="2009-12-21T00:00:00-05:00">21 Dec 2009</time></small>
           </a>
         </h3>
       </li>
@@ -150,7 +150,7 @@
 /* Define title and URL for use with share buttons, Disqus, etc. */
 var page_title = 'Make Short URLs with Python and goo.gl';
 var page_slug  = '/2012/10/22/python-goo.gl-urls/';
-var page_url   = 'http://codeadict.org/2012/10/22/python-goo.gl-urls/';
+var page_url   = 'http://codeadict.github.io/2012/10/22/python-goo.gl-urls/';
 </script>
 
       </div>

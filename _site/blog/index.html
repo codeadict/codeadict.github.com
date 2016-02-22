@@ -68,6 +68,63 @@
     <div class="panel-heading">
       <div class="post-date">
         <span class="text-muted">
+          February 21, 2016
+        </span>
+      </div>
+      <div class="post-title">
+        <a href="/2016/02/21/setting-up-a-golang-dev-environment-on-ubuntu/">
+          <h1>Setting up a Golang development environment on Ubuntu Linux.</h1>
+        </a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div>
+        <p>
+          <p><img src="http://codeadict.github.io/imgs/golang_coffee.jpg" alt="Haking Golang" /></p>
+
+<p>I am actually in the process of learning the Go programming language. I’m not only doing this because i believe that it’s an important skill to add to my Resume, but also because it’s a compiled language, similar to C/C++ stack but with nicer syntax and also because is has a pretty powerful web server built-in and creating web services its very fast process with it. Also being a compiled language, distributing and deploying apps is very simple process. And finally because the <a href="https://en.wikipedia.org/wiki/Go_%28programming_language%29">dev team</a> behind go have a great track creating powerful languages.</p>
+
+<p>This guide intends to help the novice starter in Golang, like me, to set up a development environment fast and without the headaches of compiling the language itself. This tutorial assumes you have a basic understanding of Linux commandline and at least have a notion of what is Golang and how it works. If you don’t have it don’t worry, reading <a href="http://www.gopl.io/">this great book</a> can help you a lot. So here we go:</p>
+
+<p>First we install the header dependencies on our Operating System:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get install curl git mercurial make binutils bison gcc
+</code></pre>
+</div>
+
+<p>Now lets install GVM, a Go Version Manager very similar to Ruby’s RVM or Node.js NVM, that will be your best friend working with different projects and different versions of Go:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bash &lt; &lt;<span class="o">(</span>curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer<span class="o">)</span>
+<span class="nb">source</span> <span class="nv">$HOME</span>/.gvm/scripts/gvm
+</code></pre>
+</div>
+
+<p>Now we can install the version of go needed for our first app, the last version of go till date is <a href="https://blog.golang.org/go1.6">1.6</a> but since version 1.5 Go relies on a previous version to compile itself so we can install version 1.4 and later install the last one:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gvm install go1.4
+gvm install go1.6
+gvm use go1.6 --default
+</code></pre>
+</div>
+
+<p>Once this is done Go will be in the path and ready to use. $GOROOT and $GOPATH are set automatically. At this point we may need to reload bash again with <code class="highlighter-rouge">source ~/.bashrc</code>. Now we can test our installed go version by running:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>go version
+</code></pre>
+</div>
+
+<p>And voilà we are ready to start hacking on go, so simple and you can play with different versions by using <code class="highlighter-rouge">gvm</code>.</p>
+ <a href="/2016/02/21/setting-up-a-golang-dev-environment-on-ubuntu/" class="lead">Read&nbsp;the&nbsp;entire&nbsp;post...</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="post-date">
+        <span class="text-muted">
           October 22, 2012
         </span>
       </div>
@@ -82,26 +139,26 @@
         <p>
           <p>Hi, on an application im working on that generates very long urls and need to show it easy for users i thinked on some online services that generates short URLs like bit.li or goo.gl and come with that script to make the urls shorten from Python programing language, i decided to use goo.gl service as im a huge Google fan. Here is the code i wrote and hopes can be usefull for someone</p>
 
-<p><figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">quote</span>
 <span class="kn">from</span> <span class="nn">urllib2</span> <span class="kn">import</span> <span class="n">urlopen</span><span class="p">,</span> <span class="n">Request</span><span class="p">,</span> <span class="n">HTTPError</span>
-<span class="kn">import</span> <span class="nn">simplejson</span> <span class="kn">as</span> <span class="nn">json</span></p>
+<span class="kn">import</span> <span class="nn">simplejson</span> <span class="kn">as</span> <span class="nn">json</span>
 
-<p><span class="k">def</span> <span class="nf">make_short_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">make_short_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
   <span class="s">"""
   Shorten a URL with goo.gl
   """</span>
   <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">'http://'</span><span class="p">,</span><span class="n">url</span><span class="p">):</span>
     <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Invalid URL'</span><span class="p">)</span>
   <span class="k">try</span><span class="p">:</span>
-    <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://goo.gl/api/url'</span><span class="p">,</span><span class="s">'url=</span><span class="si">%</span><span class="s">s'</span><span class="o">%</span><span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">),</span>       <br/>
-                    <span class="p">{</span><span class="s">'UserAgent'</span><span class="p">:</span><span class="s">'Python'</span><span class="p">}))</span>
+    <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://goo.gl/api/url'</span><span class="p">,</span><span class="s">'url=</span><span class="si">%</span><span class="s">s'</span><span class="o">%</span><span class="n">quote</span><span class="p">(</span><span class="n">url</span><span class="p">),</span>			
+    				<span class="p">{</span><span class="s">'UserAgent'</span><span class="p">:</span><span class="s">'Python'</span><span class="p">}))</span>
   <span class="k">except</span> <span class="n">HTTPError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
     <span class="n">json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
     <span class="k">if</span> <span class="s">'short_url'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">json</span><span class="p">:</span>
       <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Server has returned Invalid Response'</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">json</span><span class="p">[</span><span class="s">'short_url'</span><span class="p">]</span>
-  <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Unknown error has Ocurred.'</span><span class="p">)</span></code></pre></figure></p>
+  <span class="k">raise</span> <span class="nb">Exception</span><span class="p">(</span><span class="s">'Unknown error has Ocurred.'</span><span class="p">)</span></code></pre></figure>
  <a href="/2012/10/22/python-goo.gl-urls/" class="lead">Read&nbsp;the&nbsp;entire&nbsp;post...</a>
         </p>
       </div>

@@ -1,86 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://codeadict.org/</loc>
+        <loc>http://codeadict.github.io/</loc>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://codeadict.org/about.html</loc>
+        <loc>http://codeadict.github.io/about.html</loc>
         <priority>0.6</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2012/10/22/python-goo.gl-urls/</loc>
+        <loc>http://codeadict.github.io/2016/02/21/setting-up-a-golang-dev-environment-on-ubuntu/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2011/03/29/good-bye-eclipse-say-hello-to-vim/</loc>
+        <loc>http://codeadict.github.io/2012/10/22/python-goo.gl-urls/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2010/02/11/send-e-mails-with-attachment-in-python/</loc>
+        <loc>http://codeadict.github.io/2011/03/29/good-bye-eclipse-say-hello-to-vim/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/12/21/disable-usb-storage-devices-in-linux/</loc>
+        <loc>http://codeadict.github.io/2010/02/11/send-e-mails-with-attachment-in-python/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/12/17/show-flags-in-gnome-keyboard-indicator/</loc>
+        <loc>http://codeadict.github.io/2009/12/21/disable-usb-storage-devices-in-linux/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/11/12/recursive-search-in-python/</loc>
+        <loc>http://codeadict.github.io/2009/12/17/show-flags-in-gnome-keyboard-indicator/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/11/11/php-short-tags-a-bad-practice/</loc>
+        <loc>http://codeadict.github.io/2009/11/12/recursive-search-in-python/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/10/20/join-pdf-files-in-linux/</loc>
+        <loc>http://codeadict.github.io/2009/11/11/php-short-tags-a-bad-practice/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/10/16/looking-for-help-to-start-a-statistic-project-in-linux/</loc>
+        <loc>http://codeadict.github.io/2009/10/20/join-pdf-files-in-linux/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/10/16/how-to-mount-partitions/</loc>
+        <loc>http://codeadict.github.io/2009/10/16/looking-for-help-to-start-a-statistic-project-in-linux/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/10/09/jquery-ctrl-key-function/</loc>
+        <loc>http://codeadict.github.io/2009/10/16/how-to-mount-partitions/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/09/30/crear-pergamino-en-gimp/</loc>
+        <loc>http://codeadict.github.io/2009/10/09/jquery-ctrl-key-function/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/07/28/pythonnotificaciones-con-dbus/</loc>
+        <loc>http://codeadict.github.io/2009/09/30/crear-pergamino-en-gimp/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/05/07/rotar-videos-con-memcoder-y-mplayer-en-linux/</loc>
+        <loc>http://codeadict.github.io/2009/07/28/pythonnotificaciones-con-dbus/</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://codeadict.org/2009/05/07/calcular-el-trimestre-actual-en-php/</loc>
+        <loc>http://codeadict.github.io/2009/05/07/rotar-videos-con-memcoder-y-mplayer-en-linux/</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://codeadict.github.io/2009/05/07/calcular-el-trimestre-actual-en-php/</loc>
         <priority>0.8</priority>
     </url>
     
