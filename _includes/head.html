@@ -1,65 +1,18 @@
 <head>
-  <meta charset="utf-8">
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <title>
-    {% if page.title %}
-    {{ page.title }} &middot; {{ site.title }}
-    {% else %}
-    {{ site.title }} &middot; {{ site.tagline }}
-    {% endif %}
-  </title>
-  <meta content="{{ site.title }}" property="og:site_name">
-  {% if page.title %}
-  <meta content="{{ page.title }}" property="og:title">
-  {% else %}
-  <meta content="{{ site.title }}" property="og:title">
-  {% endif %}
-  {% if page.title %}
-  <meta content="article" property="og:type">
-  {% else %}
-  <meta content="website" property="og:type">
-  {% endif %}
-  {% if page.description %}
-  <meta content="{{ page.description }}" property="og:description">
-  {% else %}
-  <meta content="{{ site.description }}" property="og:description">
-  {% endif %}
-  {% if page.url %}
-  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-  {% endif %}
-  {% if page.date %}
-  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-  <meta content="{{ site.url }}" property="article:author">
-  {% endif %}
-  {% if page.image %}
-  <meta content="{{ site.url }}/imgs/{{ page.image }}" property="og:image">
-  {% else %}
-  <meta content="{{ site.url }}/imgs/me.png" property="og:image">
-  {% endif %}
-  {% if page.categories %}
-  {% for category in page.categories limit:1 %}
-  <meta content="{{ category }}" property="article:section">
-  {% endfor %}
-  {% endif %}
-  {% if page.tags %}
-  {% for tag in page.tags %}
-  <meta content="{{ tag }}" property="article:tag">
-  {% endfor %}
-  {% endif %}
-
-  <meta name="author" content="Dairon Medina">
-  <link rel="alternate" type="application/rss+xml" title="Atom Feed" href="/feed.xml" />
-  <meta name="generator" content="Jekyll" />
-  <mmeta name="description" content="Dairon Medina(codeadict), Independent full stack software developer, pythonista, Linux and Open Source advocate living in sunny Indian Rocks Beach, Florida.">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/lib/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/css/app.css">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+    <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500" type="text/css">
+
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+    {% endif %}
+</head>

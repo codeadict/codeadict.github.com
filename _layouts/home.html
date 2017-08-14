@@ -1,0 +1,23 @@
+
+---
+layout: default
+---
+
+
+{% for post in site.posts %}
+<h3>
+    <a class="text-gray-dark" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+</h3>
+<p class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</p>
+
+{% if post.description %}
+<p>{{ post.description | escape }}</p>
+{% else %}
+<p>{{ post.excerpt | strip_html | truncatewords: 50}}</p>
+{% endif %}
+
+<a href="{{ post.url | relative_url }}">Read More</a>
+{% if forloop.last == false %}
+<hr />
+{% endif %}
+{% endfor %}

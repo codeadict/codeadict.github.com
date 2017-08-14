@@ -1,56 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
 
-{% include head.html %}
 
-<body>
 
-  <div id="wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p class="avatar">
-            <a href="/">
-              <img src="/imgs/me.png" alt="Dairon Medina" class="avatar img-circle" />
-            </a>
-            <h1>Dairon Medina (@codeadict)</h1>
-            <h2>software developer</h2>
+<div class="row">
 
-            <p>
-              <span class="icon-location"></span>
-              Indian Rocks Beach, FL, Planet Earth (27.9284859,-82.755531,13 - UTC-05)
-            </p>
-          </p>
-          <h3 class="home-top-links">
-            <a href="/">Résume</a> &bull;
-            <a href="/blog">Blog</a>
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        {{ content }}
-      </div>
-    </div>
+  <div class="col-md-8">
+    <a href="/">
+      <img class="float-left rounded mr-3" src="/imgs/me.png" alt="{{ site.title | escape }}">
+    </a>
+    <h4 class="mt-0">
+      <a href="/" class="text-gray-dark">
+        {{ site.title | escape }}
+      </a>
+    </h4>
+    <p>
+      <span class="text-muted">{{ site.description | escape }}</span>
+    </p>
+
+
   </div>
+  <div class="col-md-4">
+    <ul class="nav nav-pills float-md-right justify-content-center">
+      {% if site.github_username %}
+      <li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/{{ site.github_username }}">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </li>
+      </li>
+      {% endif %}
 
-  <div id="footer" class="home-footer">
-    <div class="container">
-      <a href="http://codeadict.github.com">Copyleft Dairon Medina (@codeadict)</a></li>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike</a>
-    </div>
+      {% for page in site.pages %}
+      {% if page.title %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   </div>
+</div>
 
-
-  <!-- scripts -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
-  <!--[if lt IE 7 ]>
-  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
-  <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
-  <![endif]-->
-  <script type="text/javascript" src="/js/innerfade.js"></script>
-  <script type="text/javascript" src="/js/site.js"></script>
-</body>
+<!-- <a href="#" class="btn btn-info btn-sm"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+<a href="#" class="btn btn-info btn-sm"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+<a href="#" class="btn btn-info btn-sm"><i class="fa fa-feed" aria-hidden="true"></i> RSS</a> -->
