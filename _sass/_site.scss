@@ -1,0 +1,36 @@
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  // margin-bottom: 160px;
+  padding-top: 1.5rem;
+}
+
+.footer {
+  // position: absolute;
+  // bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  // height: 160px;
+  // line-height: 160px; /* Vertically center the text there */
+  background-color: $gray-lightest;
+  border-top: 1px solid $gray-lighter;
+}
+
+
+pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  // background-color: $gray-lightest;
+  border-radius: 3px;
+}
