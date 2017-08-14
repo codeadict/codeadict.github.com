@@ -1,21 +1,39 @@
+title: Dairon Medina CAro
+email: me@dairon.org
+description: >
+  Random ramblings about Software Engineering, Linux and other daemons
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: codeadict
+github_username:  codeadict
+linkedin_username: codeadict
+google_analytics:
+
+
+disqus:
+  shortname: daironmedinablog
+
+# Build settings
 markdown: kramdown
 highlighter: rouge
-url: http://codeadict.github.com
-exclude: [ README ]
-safe: true
-lsi: false
-excerpt_separator: <!--more-->
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-gist
 
-# Permalinks
-permalink:        pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - notebooks/jekyll.py
+  - notebooks/jekyll.tpl
 
-# Setup
-title:            'Dairon Medina'
-baseurl:          /
-
-github:
-  repo:           https://github.com/codeadict
-
-author:
-  name:           'Dairon Medina'
-  url:            https://twitter.com/codeadict
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
