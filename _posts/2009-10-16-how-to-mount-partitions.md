@@ -3,7 +3,7 @@ tags:
 - GNU/Linux cli
 type: post
 status: publish
-title: Linux: how to mount partitions at startup
+title: Linux:how to mount partitions at startup
 meta: 
   _edit_last: "7940715"
 published: true
