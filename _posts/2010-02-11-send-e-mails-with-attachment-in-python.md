@@ -12,10 +12,11 @@ meta:
 published: true
 layout: post
 ---
-Now im working on a little application that have to send emails with attachments in python, I make that code that can be reusable to someone:
+Now im working on a little application that have to send emails with attachments using [Python](http://python.org). 
+I came up with this code that I'm sharing here and hope can be helpful/reusable to somebody:
 
 
-{% highlight python linenos %}
+```python
 # -*- coding: iso-8859-1 -*-
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
@@ -23,29 +24,29 @@ from email.mime.multipart import MIMEMultipart
 from smtplib import SMTP
 
 msg = MIMEMultipart()
-msg['Subject'] = 'Email From Python jajaja'
-msg['From'] = 'dairon.medina@gmail.com'
-msg['Reply-to'] = 'otroemail@dominio'
+msg['Subject'] = 'Email From Python'
+msg['From'] = 'me@domain.cu'
+msg['Reply-to'] = 'somebody@domain.com'
 msg['To'] = 'rms@gnu.org'
 
 # That is what u see if dont have an email reader:
 msg.preamble = 'Multipart massage.\n'
 
 # This is the textual part:
-part = MIMEText(&quot;Hello im sending an email from a python program&quot;)
+part = MIMEText('Hello im sending an email from a python program')
 msg.attach(part)
 
 # This is the binary part(The Attachment):
-part = MIMEApplication(open(&quot;file.pdf&quot;,&quot;rb&quot;).read())
-part.add_header('Content-Disposition', 'attachment', filename=&quot;file.pdf&quot;)
+part = MIMEApplication(open('file.pdf', 'rb').read())
+part.add_header('Content-Disposition', 'attachment', filename='file.pdf')
 msg.attach(part)
 
 # Create an instance in SMTP server
-smtp = SMTP(&quot;smtp.domain.cu&quot;)
+smtp = SMTP('smtp.domain.cu')
 # Start the server:
 smtp.ehlo()
-smtp.login(&quot;yo@example.com&quot;, &quot;mipassword&quot;)
+smtp.login('me@domain.cu', 'mypassword')
 
 # Send the email
 smtp.sendmail(msg['From'], msg['To'], msg.as_string())
-{% endhighlight %}
+```
