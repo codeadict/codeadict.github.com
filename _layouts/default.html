@@ -1,43 +1,25 @@
-<div class="row">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <div class="col-md-8">
-    <a href="/">
-      <img class="float-left rounded mr-3" src="/imgs/me.png" alt="{{ site.title | escape }}">
-    </a>
-    <h4 class="mt-0">
-      <a href="/" class="text-gray-dark">
-        {{ site.title | escape }}
-      </a>
-    </h4>
-    <p>
-      <span class="text-muted">{{ site.description | escape }}</span>
-    </p>
+{% include head.html %}
 
-
+<body>
+<div class="container main-container">
+  <div class="hidden-print">
+    {% include header.html %}
+    <hr />
   </div>
-  <div class="col-md-4">
-    <ul class="nav nav-pills float-md-right justify-content-center">
-      {% if site.github_username %}
-      <li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/{{ site.github_username }}">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-      </li>
-      </li>
-      {% endif %}
+  <main class="page-content mt-4 mb-4" aria-label="Content">
 
-      {% for page in site.pages %}
-      {% if page.title %}
-      <li class="nav-item">
-        <a class="nav-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+    {{ content }}
+
+  </main>
+
+
 </div>
-
-<!-- <a href="#" class="btn btn-info btn-sm"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-<a href="#" class="btn btn-info btn-sm"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
-<a href="#" class="btn btn-info btn-sm"><i class="fa fa-feed" aria-hidden="true"></i> RSS</a> -->
+<div class="hidden-print">
+  {% include footer.html %}
+</div>
+{% include js_files.html %}
+</body>
+</html>
