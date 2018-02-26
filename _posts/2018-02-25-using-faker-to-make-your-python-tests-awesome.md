@@ -106,3 +106,4 @@ As you can see running the program will always return the same data.
 # References
 
 To learn more about faker and see all the available generators, you can refer to the documentation on [https://faker.readthedocs.io](https://faker.readthedocs.io).
+
