@@ -96,11 +96,11 @@ from random import randint
 from time import sleep
 
 def sum_number(n: int, number: int) -> int:
-    """Sums `n` and `number`"""
+    """Sums `n` and `number`."""
     return n + number
 
 def print_value(n: int) -> str:
-    """Prints the number"""
+    """Prints the number."""
     print(f'The value is: {n}')
 
 def random_value():
@@ -143,9 +143,7 @@ Will take the following hypotetical piece of code and see how it is performing l
 
 ```python
 def fib(n: int) -> int:
-    """
-    Computes the Fibonacci number of `n`
-    """
+    """Computes the Fibonacci number of `n`."""
     if n <= 0:
         return 0
     elif n ==1:
