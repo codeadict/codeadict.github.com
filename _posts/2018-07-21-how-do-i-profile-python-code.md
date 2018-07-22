@@ -95,15 +95,21 @@ This command is especially useful to measure different calls inside a piece of c
 from random import randint
 from time import sleep
 
-def sum_x(n: int, x: int) -> int:
-    return x + x
+def sum_number(n: int, number: int) -> int:
+    """Sums `n` and `number`"""
+    return n + number
 
 def print_value(n: int) -> str:
+    """Prints the number"""
     print(f'The value is: {n}')
 
 def random_value():
+    """
+    Generates a random number sums 25 to it,
+    sleeps and prints the final value.
+    """
     x = randint(0, 100)
-    y = sum_x(x, 25)
+    y = sum_number(x, 25)
     sleep(1)
     print_value(y)
 ```
@@ -138,7 +144,7 @@ Will take the following hypotetical piece of code and see how it is performing l
 ```python
 def fib(n: int) -> int:
     """
-    Computes the Nth Fibonacci number of `n`
+    Computes the Fibonacci number of `n`
     """
     if n <= 0:
         return 0
