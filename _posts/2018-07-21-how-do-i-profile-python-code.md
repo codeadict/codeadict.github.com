@@ -38,7 +38,7 @@ $ ipython --version
 IPython alone comes with some functionality for profiling, but I use the following packages to have more superpowers on it:
 
 ```console
-$ pip install mathplotlib
+$ pip install matplotlib
 $ pip install simple_benchmark
 $ pip install line-profiler
 $ pip install psutil
