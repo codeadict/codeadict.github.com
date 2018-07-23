@@ -15,6 +15,7 @@ While developing with Python, often we have the need for testing different algor
 
 ![Complexity]({{ site.url }}/imgs/complexity.jpg)
 
+
 There are many tools in the Python world to do this but I'm personally a big fan of using [IPython](https://ipython.org/) and just test my code on the REPL because this allows me to iterate fast and
 there are several IPython native [magic commands](https://ipython.org/ipython-doc/3/interactive/tutorial.html) and others that can be added with extensions which makes
 timing and profiling an effortless task. In this post, I will introduce how to use the following IPython
