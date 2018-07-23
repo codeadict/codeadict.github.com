@@ -11,7 +11,7 @@ published: true
 title: On IPython and other utilities I use to profile Python code.
 ---
 
-While developing with Python, often we have the need for testing different algorithm implementations to check what is it's complexity in time and space and make sure the code will be efficient enough for your needs.
+While developing with Python, often we have the need for testing different algorithm implementations to ensure they are efficient in both time and space for your requirements.
 
 ![Complexity]({{ site.url }}/imgs/complexity.jpg)
 
@@ -173,7 +173,7 @@ Line #      Hits         Time  Per Hit   % Time  Line Contents
 
 ### Profiling memory
 
-Profiling execution time is not the only measure we need to make sure our programs are efficient, the space complexity is something that we need to care about to ensure that our program will not crash due to insufficient memory. The `memory_profiler` package provides two handy commands` to use in IPython that allows us to fight those memory dragons.
+Profiling execution time is not the only measure we need to make sure our programs are efficient, the space efficiency is something that we need to care about to ensure that our program will not crash due to insufficient memory. The `memory_profiler` package provides two handy commands` to use in IPython that allows us to fight those memory dragons.
 
 Will use the following function that consumes some memory and we will profile it:
 
