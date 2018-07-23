@@ -11,7 +11,7 @@ published: true
 title: On IPython and other utilities I use to profile Python code.
 ---
 
-While developing with Python, often we have the need for testing different algorithm implementations to ensure they are efficient in both time and space to meet your bussiness requirements.
+While developing with Python, often we have the need for testing different algorithm implementations to ensure they are efficient in both time and space to meet your business requirements.
 
 ![Complexity]({{ site.url }}/imgs/complexity.jpg)
 
