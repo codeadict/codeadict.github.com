@@ -4,17 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Welcome stranger!
-
-My name is Dairon(/Daɪron̩/) Medina. This is my personal website.
+My name is Dairon(/Daɪron̩/) Medina. I am a software developer who lives in sunny Tampa Bay, FL. Experienced in engineering consumer oriented cloud services. With proven skills to execute greenfield development. As a developer, I have interests on engineering of Internet of Things (IoT), distributed systems, web applications and real-time processing projects. I like to understand the domain I work in, and to know and communicate with all the actors involved in a project, very known for asking "why?" and "what if..." to much :). Open Source enthusiast and proud Linux user.
 
 Somewhere herein, you'll find things that interest me, things I'd like to share with the Internets, and things I'd like to remember at some point in the future. This site is, however, more for myself than you.
 
-I grew up in a farm "near" [Cienfuegos, Cuba](https://en.wikipedia.org/wiki/Cienfuegos) and have been living in South America, Florida and now in Raleigh, North Carolina.
+Aside from computers I like road trips, hiking, biking and anything in the outdoors.
 
-I love Technology and like to loose my time investigating and playing with different programming languages since i was 14 years old. I hack mostly with Python, Django, Erlang, Linux and trying to learn as much as I can about functional programming languages. I have a "real job" for a living and really enjoy the remote/nomad lefestyle instead of the 8 to 5 office.
 
-Aside from computers I like road trips, hiking, biking and anything out there in the nature.
+### Tech Stack
+
+I consider myself technology agnostic but may feel comfortable working with [python](https://www.python.org/), [erlang](https://www.erlang.org/), [elixir](https://elixir-lang.org/),  and [golang](https://golang.org/). But, I am also familiar with many other languages, check my LinkedIn for reference.
 
 ### My open source projects
 
