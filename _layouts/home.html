@@ -12,10 +12,8 @@ layout: default
 {% if post.description %}
 <p>{{ post.description | escape }}</p>
 {% else %}
-<p>{{ post.excerpt | strip_html | truncatewords: 50}}</p>
+<p>{{ post.excerpt | strip_html | truncatewords: 30}}</p>
 {% endif %}
-
-<a href="{{ post.url | relative_url }}">Read More</a>
 {% if forloop.last == false %}
 <hr />
 {% endif %}
