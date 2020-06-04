@@ -1,36 +1,111 @@
-@media (min-width: 48em) {
-  .container {
-    max-width: 46rem;
-  }
-}
-
 html {
-  position: relative;
-  min-height: 100%;
+    border-top: 3px solid #C65631;
 }
+
 body {
-  /* Margin bottom by footer height */
-  // margin-bottom: 160px;
-  padding-top: 1.5rem;
+    color: #222;
+    line-height: 1.5;
+    margin: 1em auto;
+    max-width: 40em;
+    padding: 0 1em;
 }
 
-.footer {
-  // position: absolute;
-  // bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  // height: 160px;
-  // line-height: 160px; /* Vertically center the text there */
-  background-color: $gray-lightest;
-  border-top: 1px solid $gray-lighter;
+@media only screen and (min-width: 40.063em) {
+    body {
+        font-size: 112.5%;
+    }
 }
 
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+}
 
-pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  // background-color: $gray-lightest;
-  border-radius: 3px;
+a {
+    border-bottom: 1px solid #bbb;
+    color: #111;
+    text-decoration: none;
+}
+
+ul {
+    list-style: circle;
+}
+
+ul.contact {
+    list-style: none;
+}
+
+ul,
+ol {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.3em;
+    margin-left: 1em;
+}
+
+blockquote {
+    border-left: 1px solid #ccc;
+    margin: .7rem 0;
+    padding-left: 1rem;
+}
+
+.photo {
+    margin-bottom: 20px;
+}
+
+.photo>figure {
+    float: right;
+    margin-left: 1em;
+}
+
+.photo img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+figure>a,
+a img {
+    border-bottom: none;
+}
+
+img {
+    height: auto;
+    margin: .7rem auto;
+    max-width: 100%;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+hr {
+    border: none;
+    display: block;
+    height: 1rem;
+    line-height: 1;
+    margin: 0 0.7em;
+    padding: 0;
+}
+
+hr::after {
+    color: #333;
+    content: "\00B6";
+    display: block;
+    text-align: center;
+}
+
+header,
+footer,
+.center {
+    text-align: center;
+}
+
+footer {
+    color: #b64a4a;
 }
