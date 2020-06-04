@@ -12,7 +12,7 @@ layout: page
 Hello world! I'm Dairon(/Daɪron̩/) Medina, a <b>Florida</b> based freelance <a href="https://redclawtech.com">software consultant</a> who has been <b>building software for over 12 years</b>.
 </p>
 <p>
- I help tech companies develop and scale their real-time web and IoT architectures leveraging great tools like Erlang/Elixir and Golang. My services include custom development, support and consulting on Device to Cloud communication, Websockets, MQTT and highly scalable IoT backends that need to ingest and process millions of datapoints in a reliable and fault-tolerant manner.
+ I help tech companies develop and scale their real-time web and IoT architectures leveraging great tools like Erlang/Elixir and Golang. My services include custom development, support and consulting on Device to Cloud communication, Websockets, MQTT, WebRTC and highly scalable IoT backends that need to ingest and process millions of datapoints in a reliable and fault-tolerant manner.
 </p>
 
 <h3 id="contact-info">Get in Touch</h3>
