@@ -7,7 +7,7 @@ layout: page
 </header>
 <p>
 <div class="photo"><figure><img src="{{ site.url }}/imgs/photo.png" alt="Me" sizes="(max-width: 204px) 100vw, 204px" width="204" height="204"></figure></div>
-Hello, world! I'm Dairon(/Daɪron̩/) Medina, a <b>Florida</b> based freelance <a href="https://redclawtech.com">software consultant</a> who has been <b>building software for over 12 years</b>. 
+Hello, world! I'm Dairon(/Daɪron̩/) Medina, a <b>Florida</b> based freelance <a href="https://www.redclawtech.com">software consultant</a> who has been <b>building software for over 12 years</b>. 
 </p>
 <p>
 I help tech companies develop and scale their real-time web and messaging architectures leveraging great tools like Erlang/Elixir and Golang. 
