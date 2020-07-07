@@ -137,7 +137,35 @@ title:string isbn:text:unique description:text price:float authors:array:string
 
 This command will generate:
 
-1. The Schema definition at `lib/books_api/store/book.ex` that maps the data stored in the database to Elixir data structures and adds validation.
+1. The Schema definition at `lib/books_api/store/book.ex` that maps the data stored in the database to Elixir data structures and adds validation:
+
+```elixir
+defmodule BooksApi.Store.Book do
+  use Ecto.Schema
+  import Ecto.Changeset
+
+  @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
+  schema "books" do
+    field :authors, {:array, :string}
+    field :description, :string
+    field :isbn, :string
+    field :price, :float
+    field :title, :string
+
+    timestamps()
+  end
+
+  @doc false
+  def changeset(book, attrs) do
+    book
+    |> cast(attrs, [:title, :isbn, :description, :price, :authors])
+    |> validate_required([:title, :isbn, :description, :price, :authors])
+    |> unique_constraint(:isbn)
+  end
+end
+```
+
 2. Context module at `lib/books_api/store.ex` with default CRUD queries for Books. These queries can be adjusted to your own needs to filter stuff or add more queries.
 3. Migration file at `priv/repo/migrations/<timestamp>_create_books.exs`. Migrations are were we introduce DB level constraints and indexes as needed. Unlike Django migrations, we cannot generate them automatically from schema changes so these need to be created manually as you edit your DB schema.
 3. Tests for the generated schema and queries.
