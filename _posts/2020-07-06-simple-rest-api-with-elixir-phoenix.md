@@ -8,7 +8,7 @@ tags:
   - rest
   - api
 published: true
-title: REST API with Elixir/Phoenix - A tutorial for Django developers.
+title: REST API with Elixir/Phoenix - A beginner's tutorial.
 ---
 
 <figure>
@@ -119,7 +119,7 @@ $ mix ecto.drop
 
 ## Modelling our data
 
-Before starting, may be valuable to dig into [Phoenix Contexts](https://hexdocs.pm/phoenix/contexts.html) which are in short a way to isolate our system into manageable, independent parts, think of it as an app in Django for example with better organization because it only encapsulates the data and business logic and no the web parts. In this case, we will design our app with a `Store` context that will have `Books` for now but could have `Authors` as a separate schema in the future with a relationship to the books.
+Before starting, may be valuable to dig into [Phoenix Contexts](https://hexdocs.pm/phoenix/contexts.html) which are in short a way to isolate our system into manageable, independent parts, think of it as an app in Django for example with better organization because it only encapsulates the data and business logic and not the web parts. In this case, we will design our app with a `Store` context that will have `Books` for now but could have `Authors` as a separate schema in the future with a relationship to the books.
 
 Now we have everything we need to start creating our Books database model (Schema in Elixir's Ecto terminology). To do so, run the following generator in the application directory:
 
@@ -138,7 +138,7 @@ title:string isbn:text:unique description:text price:float authors:array:string
 This command will generate:
 
 1. The Schema definition at `lib/books_api/store/book.ex` that maps the data stored in the database to Elixir data structures and adds validation.
-2. Context module at `lib/books_api/store.ex` with default CRUD queries for Books. These queries can be adjusted to your own needs to filter stuff or add more queries. Think about it as a Django Manager with querysets.
+2. Context module at `lib/books_api/store.ex` with default CRUD queries for Books. These queries can be adjusted to your own needs to filter stuff or add more queries.
 3. Migration file at `priv/repo/migrations/<timestamp>_create_books.exs`. Migrations are were we introduce DB level constraints and indexes as needed. Unlike Django migrations, we cannot generate them automatically from schema changes so these need to be created manually as you edit your DB schema.
 3. Tests for the generated schema and queries.
 
@@ -277,4 +277,4 @@ Now, visiting http://localhost:4000 yields:
 
 ## The end
 
-This was all about the Phoenix REST API Tutorial, while there seems to be a lot of witchcraft and generator magic, all it does is automate the generation of boring CRUD so you can focus on your important business logic, all the generated code is very explicit and can be modified to your needs and code style just like you do with Django. I hope you found it helpful as a Django developer and this post encourages you to give Phoenix a try at least for fun. The source code for this simple project lives on my Github: [https://github.com/codeadict/phx_books_api](https://github.com/codeadict/phx_books_api).
+This was all about the Phoenix REST API Tutorial, while there seems to be a lot of witchcraft and generator magic, all it does is automate the generation of boring CRUD so you can focus on your important business logic, all the generated code is very explicit and can be modified to your needs and code style. I hope you found it helpful and this post encourages you to give Phoenix a try at least for fun. The source code for this simple project lives on my Github: [https://github.com/codeadict/phx_books_api](https://github.com/codeadict/phx_books_api).
