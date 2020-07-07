@@ -137,7 +137,7 @@ title:string isbn:text:unique description:text price:float authors:array:string
 
 This command will generate:
 
-1. The Schema definition at `lib/books_api/store/book.ex` that maps the data stored in the database to Elixir data structures and adds validation:
+1. The Schema definition at **lib/books_api/store/book.ex** that maps the data stored in the database to Elixir data structures and adds validation:
 
 ```elixir
 defmodule BooksApi.Store.Book do
@@ -166,8 +166,8 @@ defmodule BooksApi.Store.Book do
 end
 ```
 
-2. Context module at `lib/books_api/store.ex` with default CRUD queries for Books. These queries can be adjusted to your own needs to filter stuff or add more queries.
-3. Migration file at `priv/repo/migrations/<timestamp>_create_books.exs`. Migrations are were we introduce DB level constraints and indexes as needed. Unlike Django migrations, we cannot generate them automatically from schema changes so these need to be created manually as you edit your DB schema.
+2. Context module at **lib/books_api/store.ex** with default CRUD queries for Books. These queries can be adjusted to your own needs to filter stuff or add more queries.
+3. Migration file at **priv/repo/migrations/<timestamp>_create_books.exs**. Migrations are were we introduce DB level constraints and indexes as needed. Unlike Django migrations, we cannot generate them automatically from schema changes so these need to be created manually as you edit your DB schema.
 3. Tests for the generated schema and queries.
 
 ### Running Migrations
