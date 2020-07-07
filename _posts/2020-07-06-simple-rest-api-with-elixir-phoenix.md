@@ -315,6 +315,6 @@ Now, visiting http://localhost:4000 yields:
 }
 ```
 
-## The end
+## Thank you for reading!
 
 This was all about the Phoenix REST API Tutorial, while there seems to be a lot of witchcraft and generator magic, all it does is automate the generation of boring CRUD so you can focus on your important business logic, all the generated code is very explicit and can be modified to your needs and code style. I hope you found it helpful and this post encourages you to give Phoenix a try at least for fun. The source code for this simple project lives on my Github: [https://github.com/codeadict/phx_books_api](https://github.com/codeadict/phx_books_api).
