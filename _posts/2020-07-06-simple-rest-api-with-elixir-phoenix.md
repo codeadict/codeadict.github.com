@@ -9,6 +9,18 @@ tags:
   - api
 published: true
 title: REST API with Elixir/Phoenix - A beginner's tutorial.
+description: Elixir and Phoenix are a very exiting stack running in the Erlang VM. This Phoenix 1.5 tutorial will walk you through creating a simple Bookstore REST API with this platform.
+image:
+  path: /imgs/phoenix_cactus.jpg
+twitter:
+  username: RedClawTech
+  card: summary
+social:
+  name: Dairon Medina
+  links:
+    - https://twitter.com/RedClawTech
+    - https://www.linkedin.com/in/codeadict
+    - https://github.com/codeadict
 ---
 
 <figure>
@@ -193,8 +205,8 @@ title:string isbn:text:unique description:text price:float authors:array:string 
 
 This command generates:
 
-1. A CRUD controller for the books at `lib/books_api_web/controllers/book_controller.ex`.
-2. View for rendering books JSON at `lib/books_api_web/views/book_view.ex`.
+1. A CRUD controller for the books at **lib/books_api_web/controllers/book_controller.ex**.
+2. View for rendering books JSON at **lib/books_api_web/views/book_view.ex**.
 3. Controller and View used as a fallback for rendering errors when a controller operation fails.
 4. Tests for the endpoints.
 
