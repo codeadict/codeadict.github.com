@@ -28,7 +28,7 @@ The following is an image of how it looks:
 <img src="{{ site.url }}/imgs/observer_bad.png" alt="Observer looking bad in Dark Mode"/>
 </figure>
 
-Tonight, I took some time to research how this could be improved and stumbled upon the issue [ERL-921](https://bugs.erlang.org/projects/ERL/issues/ERL-921)reported in the Erlang/OTP bug tracker.
+Tonight, I took some time to research how this could be improved and stumbled upon the issue [ERL-921](https://bugs.erlang.org/projects/ERL/issues/ERL-921) in the Erlang/OTP bug tracker.
 This lead me to check the WXWidgets changelog at https://github.com/wxWidgets/wxWidgets/blob/master/docs/changes.txt#L376 and dark-mode support was introduced in version 3.1.3: (released 2019-10-28).
 The default version that comes in Homebrew is wxMac 3.0.5 for OSX Catalina. Heh, here is my problem! 
 
