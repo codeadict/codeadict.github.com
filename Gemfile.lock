@@ -60,7 +60,7 @@ GEM
     json (2.3.0)
     json-minify (0.0.3)
       json (> 0)
-    kramdown (1.17.0)
+    kramdown (>= 2.3.1)
     liquid (4.0.3)
     listen (3.2.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
