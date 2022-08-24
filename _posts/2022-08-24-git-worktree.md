@@ -46,7 +46,7 @@ The above will create a new name spaced directory and branch named "erlfmt_v2", 
 λ -> git status
 On branch erlfmt_v2
 nothing to commit, working tree clean
-``
+```
 
 Now you got stuck or tired of that work and want to leave it for later and will work on a very different problem. You get out of the namespace and start a new one:
 
