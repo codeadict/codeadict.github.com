@@ -59,7 +59,7 @@ On branch long_term_logging_improvements
 nothing to commit, working tree clean
 ````
 
-You can now have these two work trees open in different editors, terminals, and tmux panes without worrying about one work interfering with the other.
+You can now have these two work trees open in different editors, terminals, and tmux panes without worrying about one work interfering with the other. If you use VSCode, there is a nice extension that makes creating an switching worktrees easier, check https://marketplace.visualstudio.com/items?itemName=GitWorktrees.git-worktrees.
 
 I hope this can be helpful to anyone, and for more advanced usage you can refer to the [git-worktree documentation](https://git-scm.com/docs/git-worktree).
 
