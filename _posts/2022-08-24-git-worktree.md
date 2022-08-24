@@ -41,7 +41,7 @@ Let's say you are starting to work on the first branch, you need to create a wor
 
 The above will create a new name spaced directory and branch named "erlfmt_v2", you can navigate to it, open that directory with your editor and start working like normally you do with git:
 
-````console
+```console
 λ -> cd erlfmt_v2
 λ -> git status
 On branch erlfmt_v2
