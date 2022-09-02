@@ -69,7 +69,7 @@ Luckily, since Git version 2.23, Git natively supports [ignoring revisions in bl
 
 Contributors can also pass a file listing the revisions to ignore using the `--ignore-revs-file` flag or configure it globally with `git config --global blame.ignoreRevsFile .git-blame-ignore-revs`. The mentioned file is supported by GitHub too (See: https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view).
 
-This option solved the problem nicely, I formatted the codebase in one massive commit (`51114111cd70f82731f1b9ed7d4c29358e71e41b`) and then put the commit hash in the [].git-blame-ignore-revs](https://github.com/vernemq/vernemq/blob/master/.git-blame-ignore-revs) file at the root of the project:
+This option solved the problem nicely, I formatted the codebase in one massive commit (`51114111cd70f82731f1b9ed7d4c29358e71e41b`) and then put the commit hash in the [.git-blame-ignore-revs](https://github.com/vernemq/vernemq/blob/master/.git-blame-ignore-revs) file at the root of the project:
 
 ```
 # Code formatter applied: `rebar3 fmt`
