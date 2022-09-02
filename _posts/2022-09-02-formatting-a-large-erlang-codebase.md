@@ -9,7 +9,7 @@ tags:
   - clean code
 published: true
 title: Formatting an existing Erlang codebase
-description: How to format an existing codebase without messing git history. Usin an Erlang project  with erlfmt as an example.
+description: How to format an existing codebase without messing git history. Using an Erlang project  with erlfmt as an example.
 twitter:
   username: RedClawTech
   card: summary
