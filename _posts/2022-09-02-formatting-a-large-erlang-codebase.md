@@ -57,7 +57,7 @@ This one has a decent output that doesn't get in the way; it was one of my favor
 
 **[erlfmt](https://github.com/WhatsApp/erlfmt)**
 
-`erlfmt` generated pleasant output on the VerneMQ codebase, was very fast to format the entire project, and is opinionated on how it formats code, which is great. Why have opinions when a tool con apply consistency for you? It also can skip modules (`%%% % @noformat`) or expressions (`%% erlfmt-ignore`) with code comments in case the formatter gets wild with some piece of code we want to remain untouched. This project is well maintained and supported by WhatsApp/Meta and supports any editor.
+`erlfmt` generated pleasant output on the VerneMQ codebase, was very fast to format the entire project, and is opinionated on how it formats code, which is great. Why have opinions when a tool can apply consistency for you? It also can skip modules (`%%% % @noformat`) or expressions (`%% erlfmt-ignore`) with code comments in case the formatter gets wild with some piece of code we want to remain untouched. This project is well maintained and supported by WhatsApp/Meta and supports any editor.
 
 **So, we have a winner here: `erlfmt` yay!** But not so fast, there are two unsolved problems:
 
