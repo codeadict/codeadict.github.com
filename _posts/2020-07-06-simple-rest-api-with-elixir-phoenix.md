@@ -11,7 +11,7 @@ published: true
 title: REST API with Elixir/Phoenix - A beginner's tutorial.
 description: Elixir and Phoenix are a very exiting stack running in the Erlang VM. This Phoenix 1.5 tutorial will walk you through creating a simple Bookstore REST API with this platform.
 image:
-  path: /imgs/phoenix_cactus.jpg
+  path: /imgs/phoenix_cactus.webp
 twitter:
   username: RedClawTech
   card: summary
@@ -24,7 +24,7 @@ social:
 ---
 
 <figure>
-<img src="{{ site.url }}/imgs/phoenix_cactus.jpg" alt="Phoenix"/>
+<img src="{{ site.url }}/imgs/phoenix_cactus.webp" alt="Phoenix"/>
 <figcaption>Photo by <a href="https://unsplash.com/@joecook?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Joe Cook</a> on <a href="https://unsplash.com/s/photos/phoenix?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></figcaption>
 </figure>
 
@@ -278,7 +278,7 @@ Interactive Elixir (1.10.3) - press Ctrl+C to exit (type h() ENTER for help)
 
 Now visit [http://localhost:4000](http://localhost:4000) in your web browser and the following page should appear:
 
-![Phoenix]({{ site.url }}/imgs/phoenix_home.png)
+![Phoenix]({{ site.url }}/imgs/phoenix_home.webp)
 
 Note the URLs for the Books resource are listed there. 
 
@@ -286,13 +286,13 @@ Note the URLs for the Books resource are listed there.
 
 So now use the book URLs and paste it in Postman to start interacting with the books resource.
 
-![Postman POST]({{ site.url }}/imgs/phoenix_postman.png)
+![Postman POST]({{ site.url }}/imgs/phoenix_postman.webp)
 
 ### Extra tips
 
 Try visiting [http://localhost:4000/dashboard](http://localhost:4000/dashboard) and a nice system dashboard will show up:
 
-![LiveDashboard]({{ site.url }}/imgs/localhost_4000_dashboard.png)
+![LiveDashboard]({{ site.url }}/imgs/localhost_4000_dashboard.webp)
 
 This is called Phoenix LiveDashboard and allows you to easily monitor your system and register custom application metrics, but that's a subject for another post.
 

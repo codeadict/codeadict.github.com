@@ -11,7 +11,7 @@ title: Pipenv - Managing your Python projects like a boss
 
 I'm a Pythonista by nature, I always have been. I play with other languages and enjoy them, but [Python](https://www.python.org) is my favorite language that I still get back to.
 
-![Dependency Hell]({{ site.url }}/imgs/dependency_hell.png) 
+![Dependency Hell]({{ site.url }}/imgs/dependency_hell.webp) 
 
 But.. it is far from perfect and especially managing dependencies, and isolated environments do not feel that modern and robust like [npm](https://www.npmjs.com/) or [Cargo](https://doc.rust-lang.org/cargo/). [Pip](https://pip.pypa.io/en/stable/), the most used package manager for Python can be frustrating for the following situations:
 
@@ -24,7 +24,7 @@ But.. it is far from perfect and especially managing dependencies, and isolated 
 
 ### Introducing Pipenv
 
-![Pipenv]({{ site.url }}/imgs/pipenv.png) 
+![Pipenv]({{ site.url }}/imgs/pipenv.webp) 
 
 Fortunately, there is a new player in the package management arena for Pythonistas and recommended in the official [Python website](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) itself. It is called [Pipenv](https://docs.pipenv.org) and addresses most of the weak points of Pip. It brings the best of other language's package managers to the Python world and unifies [Pip](https://pip.pypa.io/en/stable/), [Pipfile](https://github.com/pypa/pipfile) and [Virtualenv](https://virtualenv.pypa.io/en/stable/) into a simple and powerful tool to manage you Python-based projects. The new `Pipfile` format differs from our old friend `requirements.txt` in several ways:
 

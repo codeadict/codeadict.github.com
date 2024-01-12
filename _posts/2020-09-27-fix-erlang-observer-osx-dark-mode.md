@@ -25,7 +25,7 @@ This has been annoying since I've been switching from my favorite dark-mode to t
 The following is an image of how it looks:
 
 <figure>
-<img src="{{ site.url }}/imgs/observer_bad.png" alt="Observer looking bad in Dark Mode"/>
+<img src="{{ site.url }}/imgs/observer_bad.webp" alt="Observer looking bad in Dark Mode"/>
 </figure>
 
 Tonight, I took some time to research how this could be improved and stumbled upon the issue [ERL-921](https://bugs.erlang.org/projects/ERL/issues/ERL-921) in the Erlang/OTP bug tracker.
@@ -52,7 +52,7 @@ $ kerl install 23.0
 And after that, running the observer worked nicely with dark-mode:
 
 <figure>
-<img src="{{ site.url }}/imgs/observer_good.png" alt="Observer looking great in Dark Mode"/>
+<img src="{{ site.url }}/imgs/observer_good.webp" alt="Observer looking great in Dark Mode"/>
 </figure>
 
 That's all folks! Hope this helps some of you.

@@ -13,7 +13,7 @@ title: Using Faker to make your Python tests awesome
 
 When you are testing your Python apps, you will find in the need for generating some dummy data that is as close as possible to real user input and also not have to worry about it containing personally identifying information (PII) for security reasons (This may seem trivial but us developers tend to suck at generating data, and we end using our own data, some movies or games that we like or data from somebody's on the team or a real customer). Also, something essential is to generate data that is not repeated on every test run to add more reliability to those tests against different inputs, that's what your users will do at the end. One possible solution for this in the case we are using Django can be using fixtures or factories by using [FactoryBoy](https://github.com/FactoryBoy/factory_boy/), but this means a lot of unnecessary extra work and the generated is static. However, there is a package named **faker** [https://github.com/joke2k/faker](https://github.com/joke2k/faker) that can be used to create fake data very quickly for your tests or just to populate a database for a demo or whatever your need is. In this post, i will show the basics of such package and how handy it can be to have it in your toolset.
 
-![Faker]({{ site.url }}/imgs/faker.png)
+![Faker]({{ site.url }}/imgs/faker.webp)
 
 ## Setting Up
 

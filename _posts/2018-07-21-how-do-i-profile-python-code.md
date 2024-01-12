@@ -13,7 +13,7 @@ title: On IPython and other utilities I use to profile Python code.
 
 While developing with Python, often we have the need for testing different algorithm implementations to ensure they are efficient in both time and space to meet your business requirements.
 
-![Complexity]({{ site.url }}/imgs/complexity.jpg)
+![Complexity]({{ site.url }}/imgs/complexity.webp)
 
 
 There are many tools in the Python world to do this but I'm personally a big fan of using [IPython](https://ipython.org/) and just test my code on the REPL because this allows me to iterate fast and
@@ -293,6 +293,6 @@ b.plot()
 
 Now we get this nice plot of both functions performance with several inputs where we can notice the second implementation surpassing the first one:
 
-![plot]({{ site.url }}/imgs/simple_benchmark.png)
+![plot]({{ site.url }}/imgs/simple_benchmark.webp)
 
 In a next post, I will write about my approach to profile and optimize apps written in Django. Would love to hear about your tips and trick in the comments below!

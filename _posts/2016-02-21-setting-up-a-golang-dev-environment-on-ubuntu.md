@@ -7,9 +7,9 @@ tags:
 - linux
 published: true
 title: Setting up a Golang development environment on Ubuntu Linux
-image: golang_coffee.jpg
+image: golang_coffee.webp
 ---
-![Haking Golang]({{ site.url }}/imgs/golang_coffee.jpg)
+![Haking Golang]({{ site.url }}/imgs/golang_coffee.webp)
 
 I am actually in the process of learning the Go programming language. I'm not only doing this because i believe that it's an important skill to add to my Resume, but also because it's a compiled language, similar to C/C++ stack but with nicer syntax and also because is has a pretty powerful web server built-in and creating web services its very straightforward process. Also being a compiled language, distributing and deploying apps is very simple. And finally because the [dev team](https://en.wikipedia.org/wiki/Go_%28programming_language%29) behind go have a great track creating powerful languages.
 

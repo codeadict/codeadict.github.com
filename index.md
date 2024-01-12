@@ -6,7 +6,7 @@ layout: page
   <h2>Dairon Medina Caro</h2>
 </header>
 <p>
-<div class="photo"><figure><img src="{{ site.url }}/imgs/photo.png" alt="Me" sizes="(max-width: 204px) 100vw, 204px" width="204" height="204"></figure></div>
+<div class="photo"><figure><img src="{{ site.url }}/imgs/photo.webp" alt="Me" sizes="(max-width: 204px) 100vw, 204px" width="204" height="204"></figure></div>
 Hello, world! I'm Dairon (/Daɪron̩/) Medina, a <b>Florida</b> based freelance <a href="https://www.redclawtech.com">software consultant</a> who has been <b>building software for over 12 years</b>.
 </p>
 <p>

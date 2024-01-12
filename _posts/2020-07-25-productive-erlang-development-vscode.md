@@ -10,7 +10,7 @@ published: false
 title: Productive Erlang Development Environment with VSCode
 description: TODO
 image:
-  path: /imgs/phoenix_cactus.jpg
+  path: /imgs/phoenix_cactus.webp
 twitter:
   username: RedClawTech
   card: summary

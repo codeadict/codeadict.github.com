@@ -74,6 +74,6 @@ In a clustered environment, the plugin sends each node name in the cluster as a 
 
 ### Sample graph generated with the plugin
 
-![VerneMQ Cloudwatch]({{ site.url }}/imgs/vernemq_cloudwatch.png)
+![VerneMQ Cloudwatch]({{ site.url }}/imgs/vernemq_cloudwatch.webp)
 
 That's it folks, hope this can be useful to somebody out there, feel free to report any bug or improvement on GitHub.
