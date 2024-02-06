@@ -30,7 +30,7 @@ defmodule Dairon.MixProject do
       {:yaml_elixir, "~> 2.9.0"},
       {:html_sanitize_ex, "~> 1.4.3"},
       {:dart_sass, "~> 0.6"},
-      {:bandit, "~> 1.1.0"},
+      {:bandit, "~> 1.2.0"},
       {:exsync, "~> 0.2"}
     ]
   end
