@@ -24,4 +24,4 @@ Start the local development server with:
 iex -S mix
 ```
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:3000`](http://localhost:3000) from your browser.
