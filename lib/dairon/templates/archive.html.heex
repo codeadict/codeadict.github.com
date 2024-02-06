@@ -1,0 +1,28 @@
+<.layout
+  title={Content.site_config(:site_title)}
+  description={Content.site_config(:site_description)}
+  route="/"
+  og_type="website"
+>
+  <div class="border-b mb-12">
+    <h1>Articles</h1>
+    <p class="font-light text-gray-700 text-sm mb-3 mt-1">
+      You will find here all the articles that I have published, happy reading!
+    </p>
+  </div>
+  <div class="posts">
+    <a :for={post <- @posts} href={post.route} class="post-link alternate">
+      <div class="archive-post">
+        <h2 class="post-title"><%= post.title %></h2>
+        <small class="post-meta">
+          <span class="author">Dairon Medina Caro - </span>
+          <time datetime={post.date}><%= format_post_date(post.date) %> -</time>
+          <span class="reading-time" title="Estimated reading time">
+            <%= post.estimated_reading_time %> minutes read
+          </span>
+        </small>
+        <div class="post-summary"><%= post.description %></div>
+      </div>
+    </a>
+  </div>
+</.layout>

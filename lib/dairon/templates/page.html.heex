@@ -1,0 +1,15 @@
+<.layout
+  title={"#{@title} — #{Content.site_config(:site_title)}"}
+  description={@description}
+  og_type="website"
+  route={@route}
+>
+  <div class="post-header">
+    <a href={@route}>
+      <h1><%= @title %></h1>
+    </a>
+  </div>
+  <article class="post-content">
+    <%= raw(@body) %>
+  </article>
+</.layout>

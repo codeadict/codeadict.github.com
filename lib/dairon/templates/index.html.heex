@@ -1,0 +1,58 @@
+<.layout
+  title={Content.site_config(:site_title)}
+  description={Content.site_config(:site_description)}
+  route="/"
+  og_type="website"
+>
+  <section>
+    <div class="homepage">
+      <p>
+        <strong>¡Hola mundo! 👋</strong>
+        I'm Dairon [<i>/Die-ron/</i>], a remote Software Engineer. You will find all my
+        <a href="/archive/">articles</a>
+        related to <strong>programming</strong>, <strong>DevOps</strong>
+        and more.
+      </p>
+      <p>
+        <ul>
+          <li>
+            I work on <a href="https://github.com/codeadict">open-source projects</a>
+            that you can find on my Github.
+          </li>
+          <li>
+            I'm the founder of <a href="https://redclawtech.com/">RedClawTech</a>, a consulting studio to help Indie entreperneurs to build
+            their ideas using Erlang and Elixir. Also working on our own products.
+          </li>
+          <li>
+            The rest of the time, I am passionate about gardening/permaculture, cooking and travel.
+          </li>
+        </ul>
+      </p>
+    </div>
+  </section>
+  <section>
+    <div class="border-b mb-12">
+      <h1>Latest articles</h1>
+      <p class="font-light text-gray-700 text-sm mb-3 mt-1">
+        You will find here all the articles that I have published, happy reading!
+      </p>
+    </div>
+    <a :for={post <- @posts} href={post.route} class="post-link alternate">
+      <div>
+        <h2 class="post-title"><%= post.title %></h2>
+        <small class="post-meta">
+          <span class="author">Dairon Medina Caro - </span>
+          <time datetime={post.date}><%= format_post_date(post.date) %> -</time>
+          <span class="reading-time" title="Estimated reading time">
+            <%= post.estimated_reading_time %> minutes read
+          </span>
+        </small>
+        <div class="post-summary"><%= post.description %></div>
+      </div>
+    </a>
+  </section>
+  <hr />
+  <p>
+    <center><i>See <a href="/archive/">archive</a> for all the articles.</i></center>
+  </p>
+</.layout>
