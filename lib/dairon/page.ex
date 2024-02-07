@@ -53,7 +53,6 @@ defmodule Dairon.Page do
 
   def build("content/posts/" <> filename, attrs, body) do
     [year, month, day, id] = String.split(Path.rootname(filename), "-", parts: 4)
-    IO.inspect(id)
     date = Date.from_iso8601!("#{year}-#{month}-#{day}")
     html_path = Path.join(id, "index.html")
     src_path = "content/posts/#{filename}"

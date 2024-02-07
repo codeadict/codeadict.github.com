@@ -10,30 +10,6 @@ defmodule Dairon.Templates do
     write_file(path, safe)
   end
 
-  def format_iso_date(date = %DateTime{}) do
-    DateTime.to_iso8601(date)
-  end
-
-  def format_iso_date(date = %Date{}) do
-    date
-    |> DateTime.new!(~T[06:00:00])
-    |> format_iso_date()
-  end
-
-  def format_post_date(date) do
-    Calendar.strftime(date, "%B %-d, %Y")
-  end
-
-  def format_rss_date(date = %DateTime{}) do
-    Calendar.strftime(date, "%a, %d %b %Y %H:%M:%S %z")
-  end
-
-  def format_rss_date(date = %Date{}) do
-    date
-    |> DateTime.new!(~T[06:00:00])
-    |> format_rss_date()
-  end
-
   def render_rss(path, posts) do
     XmlBuilder.element(:rss, %{version: "2.0", "xmlns:atom": "http://www.w3.org/2005/Atom"}, [
       {:channel,
@@ -88,6 +64,30 @@ defmodule Dairon.Templates do
     |> XmlBuilder.document()
     |> XmlBuilder.generate()
     |> then(&write_file(path, &1))
+  end
+
+  def format_iso_date(date = %DateTime{}) do
+    DateTime.to_iso8601(date)
+  end
+
+  def format_iso_date(date = %Date{}) do
+    date
+    |> DateTime.new!(~T[06:00:00])
+    |> format_iso_date()
+  end
+
+  def format_post_date(date) do
+    Calendar.strftime(date, "%B %-d, %Y")
+  end
+
+  defp format_rss_date(date = %DateTime{}) do
+    Calendar.strftime(date, "%a, %d %b %Y %H:%M:%S %z")
+  end
+
+  defp format_rss_date(date = %Date{}) do
+    date
+    |> DateTime.new!(~T[06:00:00])
+    |> format_rss_date()
   end
 
   defp write_file(path, data) do
