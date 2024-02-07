@@ -14,7 +14,7 @@ defmodule Dairon.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {Dairon.Application, []}
+      mod: {Dairon, []}
     ]
   end
 

@@ -4,8 +4,20 @@ defmodule Dairon do
   """
 
   require Logger
+  use Application
+
   alias Dairon.Content
   alias Dairon.Templates
+
+  @impl true
+  def start(_type, _args) do
+    children = [
+      {Bandit, plug: Dairon.DevServer, scheme: :http, port: 3000}
+    ]
+
+    Logger.info("Development site serving at: http://localhost:3000")
+    Supervisor.start_link(children, strategy: :one_for_one, name: Dairon.Supervisor)
+  end
 
   def site_config(key) do
     Application.get_env(:dairon, key)
