@@ -5,18 +5,7 @@ defmodule Dairon.Templates do
 
   embed_templates("templates/*")
 
-  def write_file(path, data) do
-    dir = Path.dirname(path)
-    output = Path.join([site_config(:output_dir), path])
-
-    if dir != "." do
-      File.mkdir_p!(Path.join([site_config(:output_dir), dir]))
-    end
-
-    File.write!(output, data)
-  end
-
-  def render_file(path, rendered) do
+  def render(path, rendered) do
     safe = Phoenix.HTML.Safe.to_iodata(rendered)
     write_file(path, safe)
   end
@@ -45,18 +34,7 @@ defmodule Dairon.Templates do
     |> format_rss_date()
   end
 
-  def rss_post_limit() do
-    20
-  end
-
-  def count_words(text) do
-    text
-    |> HtmlSanitizeEx.strip_tags()
-    |> String.split()
-    |> Enum.count()
-  end
-
-  def rss(posts) do
+  def render_rss(path, posts) do
     XmlBuilder.element(:rss, %{version: "2.0", "xmlns:atom": "http://www.w3.org/2005/Atom"}, [
       {:channel,
        [
@@ -75,7 +53,7 @@ defmodule Dairon.Templates do
             type: "application/rss+xml"
           }}
        ] ++
-         for post <- Enum.take(posts, rss_post_limit()) do
+         for post <- Enum.take(posts, site_config(:rss_post_limit)) do
            {:item,
             [
               {:title, post.title},
@@ -88,9 +66,10 @@ defmodule Dairon.Templates do
          end}
     ])
     |> XmlBuilder.generate()
+    |> then(&write_file(path, &1))
   end
 
-  def sitemap(pages) do
+  def render_sitemap(path, pages) do
     {:urlset,
      %{
        xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
@@ -108,5 +87,17 @@ defmodule Dairon.Templates do
      ]}
     |> XmlBuilder.document()
     |> XmlBuilder.generate()
+    |> then(&write_file(path, &1))
+  end
+
+  defp write_file(path, data) do
+    dir = Path.dirname(path)
+    output = Path.join([site_config(:output_dir), path])
+
+    if dir != "." do
+      File.mkdir_p!(Path.join([site_config(:output_dir), dir]))
+    end
+
+    File.write!(output, data)
   end
 end

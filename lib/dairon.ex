@@ -16,15 +16,15 @@ defmodule Dairon do
     all_posts = Content.all_posts()
     about_page = Content.about_page()
     Content.assert_uniq_page_ids!(pages)
-    Templates.render_file("index.html", Templates.index(%{posts: Content.all_posts()}))
-    Templates.render_file("404.html", Templates.page(Content.not_found_page()))
-    Templates.render_file(about_page.html_path, Templates.page(about_page))
-    Templates.render_file("archive/index.html", Templates.archive(%{posts: all_posts}))
-    Templates.write_file("feed.xml", Templates.rss(all_posts))
-    # Templates.write_file("sitemap.xml", Templates.sitemap(pages))
+    Templates.render("index.html", Templates.index(%{posts: Content.all_posts()}))
+    Templates.render("404.html", Templates.page(Content.not_found_page()))
+    Templates.render(about_page.html_path, Templates.page(about_page))
+    Templates.render("archive/index.html", Templates.archive(%{posts: all_posts}))
+    Templates.render_rss("feed.xml", all_posts)
+    Templates.render_sitemap("sitemap.xml", pages)
 
     for post <- all_posts do
-      Templates.render_file(post.html_path, Templates.post(post))
+      Templates.render(post.html_path, Templates.post(post))
     end
 
     :ok

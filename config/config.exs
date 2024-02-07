@@ -12,6 +12,7 @@ config :dairon,
   site_author: author,
   site_email: "me@dairon.org",
   site_copyright: "© #{year} #{author}",
+  rss_post_limit: 20,
   output_dir: output_dir
 
 config :dart_sass,

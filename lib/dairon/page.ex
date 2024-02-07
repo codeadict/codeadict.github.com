@@ -11,6 +11,7 @@ defmodule Dairon.Page do
     :route,
     :keywords,
     :estimated_reading_time,
+    :word_count,
     :draft
   ]
 
@@ -43,11 +44,9 @@ defmodule Dairon.Page do
       end
 
     attrs =
-      Map.put(
-        attrs,
-        :estimated_reading_time,
-        trunc(Float.ceil(count_words(body) / 180.0))
-      )
+      attrs
+      |> Map.put(:estimated_reading_time, trunc(Float.ceil(count_words(body) / 180.0)))
+      |> Map.put(:word_count, count_words(body))
 
     {attrs, body}
   end
