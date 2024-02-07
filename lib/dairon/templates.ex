@@ -1,9 +1,25 @@
 defmodule Dairon.Templates do
   use Phoenix.Component
-  alias Dairon.Content
   import Phoenix.HTML
+  import Dairon, only: [site_config: 1]
 
   embed_templates("templates/*")
+
+  def write_file(path, data) do
+    dir = Path.dirname(path)
+    output = Path.join([site_config(:output_dir), path])
+
+    if dir != "." do
+      File.mkdir_p!(Path.join([site_config(:output_dir), dir]))
+    end
+
+    File.write!(output, data)
+  end
+
+  def render_file(path, rendered) do
+    safe = Phoenix.HTML.Safe.to_iodata(rendered)
+    write_file(path, safe)
+  end
 
   def format_iso_date(date = %DateTime{}) do
     DateTime.to_iso8601(date)
@@ -44,19 +60,17 @@ defmodule Dairon.Templates do
     XmlBuilder.element(:rss, %{version: "2.0", "xmlns:atom": "http://www.w3.org/2005/Atom"}, [
       {:channel,
        [
-         {:title, Content.site_config(:site_title)},
-         {:link, Content.site_config(:site_url)},
-         {:description, "Recent content on #{Content.site_config(:site_title)}"},
+         {:title, site_config(:site_title)},
+         {:link, site_config(:site_url)},
+         {:description, "Recent content on #{site_config(:site_title)}"},
          {:language, "en-us"},
-         {:managingEditor,
-          "#{Content.site_config(:site_url)} (#{Content.site_config(:site_email)})"},
-         {:webMaster,
-          "#{Content.site_config(:site_author)} (#{Content.site_config(:site_email)})"},
-         {:copyright, Content.site_config(:site_copyright)},
+         {:managingEditor, "#{site_config(:site_url)} (#{site_config(:site_email)})"},
+         {:webMaster, "#{site_config(:site_author)} (#{site_config(:site_email)})"},
+         {:copyright, site_config(:site_copyright)},
          {:lastBuildDate, format_rss_date(DateTime.utc_now())},
          {:"atom:link",
           %{
-            href: "#{Content.site_config(:site_url)}/index.xml",
+            href: "#{site_config(:site_url)}/index.xml",
             rel: "self",
             type: "application/rss+xml"
           }}
@@ -65,11 +79,10 @@ defmodule Dairon.Templates do
            {:item,
             [
               {:title, post.title},
-              {:link, Content.site_config(:site_url) <> post.route},
+              {:link, site_config(:site_url) <> post.route},
               {:pubDate, format_rss_date(post.date)},
-              {:author,
-               "#{Content.site_config(:site_author)} (#{Content.site_config(:site_email)})"},
-              {:guid, Content.site_config(:site_url) <> post.route},
+              {:author, "#{site_config(:site_author)} (#{site_config(:site_email)})"},
+              {:guid, site_config(:site_url) <> post.route},
               {:description, post.description}
             ]}
          end}
@@ -84,12 +97,11 @@ defmodule Dairon.Templates do
        "xmlns:xhtml": "http://www.w3.org/1999/xhtml"
      },
      [
-       {:url,
-        [{:loc, Content.site_config(:site_url)}, {:lastmod, format_iso_date(DateTime.utc_now())}]}
+       {:url, [{:loc, site_config(:site_url)}, {:lastmod, format_iso_date(DateTime.utc_now())}]}
        | for page <- pages do
            {:url,
             [
-              {:loc, Content.site_config(:site_url) <> page.route},
+              {:loc, site_config(:site_url) <> page.route},
               {:lastmod, format_iso_date(page.date)}
             ]}
          end

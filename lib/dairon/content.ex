@@ -11,8 +11,15 @@ defmodule Dairon.Content do
     highlighters: [:makeup_erlang, :makeup_elixir, :makeup_js, :makeup_json, :makeup_html],
     earmark_options: [breaks: true, footnotes: true]
 
-  def site_config(key) do
-    Application.get_env(:dairon, key)
+  def assert_uniq_page_ids!(pages) do
+    ids = pages |> Enum.map(& &1.id)
+    dups = Enum.uniq(ids -- Enum.uniq(ids))
+
+    if dups |> Enum.empty?() do
+      :ok
+    else
+      raise "Duplicate pages: #{inspect(dups)}"
+    end
   end
 
   def all_posts do
