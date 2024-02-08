@@ -30,4 +30,4 @@ Start the local development server with:
 mix dairon.server
 ```
 
-**Voilà!** Now you can visit the website from your browser in the printed port.
+**Voilà!** Now you can visit the website from your browser in the printed port 🎉.
