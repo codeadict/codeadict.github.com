@@ -36,15 +36,6 @@ defmodule Dairon.Page do
       attrs
       |> Enum.filter(fn {k, _v} -> String.to_atom(k) in @attts end)
       |> Map.new(fn {k, v} -> {String.to_atom(k), v} end)
-
-    attrs =
-      case :binary.split(body, ["\n<!-- excerpt -->\n"]) do
-        [excerpt | [_ | _]] -> Map.put(attrs, :excerpt, String.trim(excerpt))
-        _ -> attrs
-      end
-
-    attrs =
-      attrs
       |> Map.put(:estimated_reading_time, trunc(Float.ceil(count_words(body) / 180.0)))
       |> Map.put(:word_count, count_words(body))
 

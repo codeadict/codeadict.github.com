@@ -14,7 +14,7 @@
       </a>
       <small class="post-meta">
         <span class="author">Dairon Medina Caro - </span>
-        <time datetime={@date}><%= format_post_date(@date) %> -</time>
+        <time datetime={@date}><%= Calendar.strftime(@date, "%B %-d, %Y") %> -</time>
         <span class="reading-time" title="Estimated reading time">
           <%= @estimated_reading_time %> minutes read
         </span>

@@ -6,10 +6,16 @@ Powered by [Elixir](https://elixir-lang.org/) and hosted on Github pages.
 
 ## Development
 
-Install dependencies with [asdf](https://asdf-vm.com/):
+Install Erlang and Elixir with [asdf](https://asdf-vm.com/):
 
 ```bash
 asdf install
+```
+
+Install the dependencies with:
+
+```bash
+mix deps.get
 ```
 
 To compile the pages run:
@@ -21,7 +27,7 @@ mix compile
 Start the local development server with:
 
 ```bash
-iex -S mix
+mix dairon.server
 ```
 
-Now you can visit [`localhost:3000`](http://localhost:3000) from your browser.
+**Voilà!** Now you can visit the website from your browser in the printed port.

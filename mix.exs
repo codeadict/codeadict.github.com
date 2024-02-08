@@ -7,14 +7,20 @@ defmodule Dairon.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      aliases: aliases()
+    ]
+  end
+
+  defp aliases do
+    [
+      compile: ["compile", &compile_site/1]
     ]
   end
 
   def application do
     [
-      extra_applications: [:logger],
-      mod: {Dairon, []}
+      extra_applications: [:logger]
     ]
   end
 
@@ -28,10 +34,11 @@ defmodule Dairon.MixProject do
       {:phoenix_live_view, "~> 0.20.3"},
       {:xml_builder, "~> 2.2.0"},
       {:yaml_elixir, "~> 2.9.0"},
-      {:html_sanitize_ex, "~> 1.4.3"},
-      {:dart_sass, "~> 0.6"},
-      {:bandit, "~> 1.2.0"},
-      {:exsync, "~> 0.2"}
+      {:dart_sass, "~> 0.6"}
     ]
+  end
+
+  defp compile_site(_args) do
+    Dairon.build()
   end
 end

@@ -24,8 +24,3 @@ config :dart_sass,
     ],
     cd: Path.expand("../assets", __DIR__)
   ]
-
-config :exsync,
-  src_monitor: true,
-  extra_extensions: [".md", ".js", ".scss"],
-  addition_dirs: ["/pages", "/assets"]
