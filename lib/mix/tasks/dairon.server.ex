@@ -16,9 +16,9 @@ defmodule Mix.Tasks.Dairon.Server do
 
     case :inets.start(:httpd,
            server_name: ~c"dairon_local_server",
-           document_root: to_charlist(path),
-           directory_index: [to_charlist("index.html")],
-           server_root: to_charlist("."),
+           document_root: ~c"#{path}",
+           directory_index: [~c"index.html"],
+           server_root: ~c".",
            port: 0,
            mime_types: [
              {~c"html", ~c"text/html"},
