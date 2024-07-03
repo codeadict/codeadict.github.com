@@ -24,7 +24,7 @@ defmodule Dairon.Templates do
     render(about_page.html_path, page(about_page))
     render("archive/index.html", archive(%{posts: all_posts}))
     render_rss("feed.xml", all_posts)
-    render_sitemap("sitemap.xml", pages)
+    render("sitemap.xml", sitemap(%{pages: pages}))
 
     for post <- all_posts do
       render(post.html_path, post(post))
@@ -81,27 +81,6 @@ defmodule Dairon.Templates do
             ]}
          end}
     ])
-    |> XmlBuilder.generate()
-    |> then(&write_file(path, &1))
-  end
-
-  defp render_sitemap(path, pages) do
-    {:urlset,
-     %{
-       xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
-       "xmlns:xhtml": "http://www.w3.org/1999/xhtml"
-     },
-     [
-       {:url, [{:loc, site_config(:site_url)}, {:lastmod, format_iso_date(DateTime.utc_now())}]}
-       | for page <- pages do
-           {:url,
-            [
-              {:loc, site_config(:site_url) <> page.route},
-              {:lastmod, format_iso_date(page.date)}
-            ]}
-         end
-     ]}
-    |> XmlBuilder.document()
     |> XmlBuilder.generate()
     |> then(&write_file(path, &1))
   end

@@ -22,6 +22,7 @@ defmodule Dairon do
     File.mkdir_p!(site_config(:output_dir))
     Logger.info("Copying static files")
     File.cp_r!("assets/static", site_config(:output_dir))
+    File.cp_r!("robots.txt", site_config(:output_dir))
     Logger.info("Building pages...")
     {micro, :ok} = :timer.tc(fn -> Dairon.Templates.render_all() end)
     Logger.info("Pages built in #{micro / 1000}ms")

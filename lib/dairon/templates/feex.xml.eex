@@ -1,0 +1,28 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><%= site_config(:site_title) %></title>
+  <subtitle><%= site_config(:site_description) %></subtitle>
+  <id><%= site_config(:site_url) %></id>
+  <link href="<%= site_config(:site_url) %>/"/>
+  <link href="<%= site_config(:site_url) %>/feed.xml" rel="self"/>
+  <updated><%= DateTime.utc_now() |> DateTime.to_iso8601() %></updated>
+  <language>en-us</language>
+  <copyright><%= site_config(:site_copyright) %></copyright>
+  <author>
+    <name><%= site.author %></name>
+  </author>
+<%= for post <- posts do %>
+  <% date = post.raw_date |> elem(0) |> Date.from_erl!() |> Date.to_iso8601() %>
+  <% time = post.raw_date |> elem(1) |> Time.from_erl!() |> Time.to_iso8601() %>
+  <entry>
+    <title><%= Site.Entities.encode(post.title) %></title>
+    <link rel="alternate" href="<%= site.server_root %><%= post.url %>"/>
+    <id><%= site.server_root %><%= post.url %></id>
+    <updated><%= "#{date}T#{time}Z" %></updated>
+    <author>
+      <name><%= site.author %></name>
+    </author>
+    <summary><%= Site.Entities.encode(post.extras["preview"] || "") %></summary>
+    <content type="html"><%= Site.Entities.encode(post.html) %></content>
+  </entry>
+<% end %>
+</feed>
