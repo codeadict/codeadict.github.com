@@ -24,7 +24,7 @@ defmodule Dairon.Templates do
     render(about_page.html_path, page(about_page))
     render("archive/index.html", archive(%{posts: all_posts}))
     render_rss("feed.xml", all_posts)
-    render("sitemap.xml", sitemap(%{pages: pages}))
+    render("sitemap.xml", sitemap(%{pages: pages}), safe: false)
 
     for post <- all_posts do
       render(post.html_path, post(post))
@@ -45,9 +45,13 @@ defmodule Dairon.Templates do
 
   def format_iso_date(date = %DateTime{}), do: DateTime.to_iso8601(date)
 
-  defp render(path, rendered) do
-    safe = Phoenix.HTML.Safe.to_iodata(rendered)
-    write_file(path, safe)
+  defp render(path, rendered, opts \\ []) do
+    rendered =
+      if Keyword.get(opts, :safe, true),
+        do: Phoenix.HTML.Safe.to_iodata(rendered),
+        else: rendered
+
+    write_file(path, rendered)
   end
 
   defp render_rss(path, posts) do
