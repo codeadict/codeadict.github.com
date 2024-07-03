@@ -4,22 +4,30 @@
   route="/"
   og_type="website"
 >
-  <div class="recipe-archive" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
- 	<figure>
-		<a href="">
-		</a>
-		<span class="post-pinit-button">
-			<a data-pin-do="buttonPinn" href="https://www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>/&media=<?php echo esc_url( rawurlencode( $recipe->thumbnail ) ); ?>&description=So%20delicious!" data-pin-custom="true">
-				<img src="/assets/img/pinit-sm.png" alt="pinit">
-			</a>
-		</span>
-	</figure>
-	<div class="recipe-archive-details">
-	 <h2>
-		<a itemprop="url" href="#">
-		  Recipe Name
-		</a>
-	 </h2>
-	</div>
+  <div
+    class="recipe-archive"
+    itemprop="itemListElement"
+    itemscope
+    itemtype="http://schema.org/ListItem"
+  >
+    <figure>
+      <a href=""></a>
+      <span class="post-pinit-button">
+        <a
+          data-pin-do="buttonPinn"
+          href="https://www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>/&media=<?php echo esc_url( rawurlencode( $recipe->thumbnail ) ); ?>&description=So%20delicious!"
+          data-pin-custom="true"
+        >
+          <img src="/assets/img/pinit-sm.png" alt="pinit" />
+        </a>
+      </span>
+    </figure>
+    <div class="recipe-archive-details">
+      <h2>
+        <a itemprop="url" href="#">
+          Recipe Name
+        </a>
+      </h2>
+    </div>
   </div>
 </.layout>
