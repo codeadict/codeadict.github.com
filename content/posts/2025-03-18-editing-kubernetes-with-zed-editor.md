@@ -25,7 +25,7 @@ The [Zed Editor](https://zed.dev/) has been my daily driver for writting code fo
 
 I started to look for some solutions to this problem, and I found that the Zed Editor uses the [yaml-language-server](https://github.com/redhat-developer/yaml-language-server) to edit YAML files and this language server has support for providing Kubernetes schema validation. This means that the Zed Editor can provide real-time validation and error checking for Kubernetes configurations, making it easier to catch and fix errors without having to switch to another editor or running `kubectl` commands which can be time-consuming.
 
-To enable this, you need to edit your project's Zed settings (`.zed/settings.json`) (Accessed with `CMD + Shift + p` in OSX and choose "zed: open project settings") and add the following lines:
+To enable this, you need to edit your project's Zed settings (`.zed/settings.json`) (Accessed with `CMD + Shift + p`  => `zed: open project settings`) by adding the following lines:
 
 ```yaml
 "lsp": {
