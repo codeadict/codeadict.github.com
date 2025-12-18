@@ -30,17 +30,17 @@ Over time, I have realized that this way of communicating is surprisingly useful
 
 Almost every request for an estimate starts the same way:
 
-> “Just give a rough guess. It doesn’t have to be accurate.”
+> "Just give a rough guess. It doesn’t have to be accurate..."
 
 This is one of the biggest lies in software engineering. The moment you say a number, it immediately becomes:
 
-• fixed
-• added to the roadmap
-• shared with leadership
-• remembered forever
-• written in a spreadsheet no one will update
-• forwarded without context
-• repeated back to you in meetings you were never invited to
+* fixed
+* added to the roadmap
+* shared with leadership
+* remembered forever
+* written in a spreadsheet no one will update
+* forwarded without context
+* repeated back to you in meetings you were never invited to
 
 A few weeks later, the familiar questions appear:
 
@@ -50,7 +50,7 @@ A few weeks later, the familiar questions appear:
 
 So how do you estimate like a Galician?
 
-When someone asks, I answer with more questions. I slow things down and clarify every detail of what is being requested, making sure everything is written down and clearly communicated. And when the question comes again, usually something like “Will it be done by next week?”, there is always the same honest answer:
+When someone asks, I answer with more questions. I slow things down and clarify every detail of what is being requested, making sure everything is written down and clearly communicated. And when the question comes again, usually something like "Will it be done by next week?", there is always the same honest answer:
 
 *It depends…*
 
