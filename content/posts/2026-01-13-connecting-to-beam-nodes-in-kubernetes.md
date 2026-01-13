@@ -114,9 +114,7 @@ When you run `kubectl beam`, here's the sequence of operations:
 
 **1. EPMD Port Discovery**
 
-First, the plugin port-forwards the EPMD port (4369) from the pod to your local machine. EPMD (Erlang Port Mapper Daemon) is how BEAM nodes discover each other's distribution ports.[^epmd-note]
-
-[^epmd-note]: EPMD is a small name server that BEAM nodes register with when they start. Other nodes query EPMD to find out which port a particular node is listening on.
+First, the plugin port-forwards the EPMD port (4369) from the pod to your local machine. EPMD (Erlang Port Mapper Daemon) is how BEAM nodes discover each other's distribution ports.
 
 The plugin queries the local EPMD to discover which port the target node is actually using for distribution. These ports are dynamically assigned, which is why manual connection is such a pain.
 
@@ -142,9 +140,7 @@ If it finds a cookie, it uses it automatically. Otherwise, you'll need to specif
 
 **5. Starting the Local Shell**
 
-Finally, the plugin starts your chosen shell (IEx or erl) as a hidden node[^hidden-node] configured to connect to the remote node. All the environment variables, cookie settings, and connection parameters are set up correctly so the connection just works.
-
-[^hidden-node]: Hidden nodes are a special type of BEAM node that doesn't participate in the normal node discovery process. They're perfect for debugging and inspection tools since they don't affect the cluster's topology.
+Finally, the plugin starts your chosen shell (IEx or erl) as a hidden node configured to connect to the remote node. All the environment variables, cookie settings, and connection parameters are set up correctly so the connection just works.
 
 The terminal handling is done carefully to preserve TTY characteristics---your shell gets the terminal size, control sequences, and all the interactive features you expect.
 
